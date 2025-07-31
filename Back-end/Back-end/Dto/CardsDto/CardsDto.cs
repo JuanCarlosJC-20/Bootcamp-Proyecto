@@ -1,15 +1,15 @@
-﻿using Back_end.Base;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Back_end.Base;
 using System.Threading.Tasks;
 
-namespace Back_end.Model
+namespace Back_end.Dto.CardsDto
 {
-    public class Cards : EntityBase
+    public class CardsDto : EntityBase
     {
-        public string Name { get; set; }
+        public string Name { get; set; } 
         public string image { get; set; }
         public int Health { get; set; }
         public int LetterLevel { get; set; }
@@ -17,10 +17,6 @@ namespace Back_end.Model
         public int Endurance { get; set; }
         public int Power { get; set; }
         public int Scope { get; set; }
-        public string Category { get; set; }    
-
-        public int idMazo { get; set; } 
-        public Mazo Mazo { get; set; }
-
+        public string Category { get; set; }
     }
 }

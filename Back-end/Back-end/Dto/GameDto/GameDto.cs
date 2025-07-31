@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Back_end.Base;
 using System.Threading.Tasks;
 
-namespace Back_end.Model
+namespace Back_end.Dto.GameDto
 {
-    internal class CardPlayerRoom
+    public class GameDto : EntityBase
     {
+
     }
 }

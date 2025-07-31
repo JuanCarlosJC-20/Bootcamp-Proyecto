@@ -3,6 +3,58 @@
   "WorkspaceRootPath": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\model\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\model\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\model\\cards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\model\\cards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\model\\round.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\model\\round.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\model\\turn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\model\\turn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\model\\mazo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\model\\mazo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\model\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\model\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\dto\\cardsdto\\cardsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\dto\\cardsdto\\cardsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\dto\\raunddto\\rounddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\dto\\raunddto\\rounddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\dto\\mazodto\\mazodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\dto\\mazodto\\mazodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\dto\\gamedto\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\dto\\gamedto\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\dto\\userdto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\dto\\userdto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\dto\\roomdto\\roomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\dto\\roomdto\\roomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\base\\entitybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\base\\entitybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\entity.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\entity.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -26,16 +78,188 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Round.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Round.cs",
+              "RelativeDocumentMoniker": "Back-end\\Model\\Round.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Round.cs",
+              "RelativeToolTip": "Back-end\\Model\\Round.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAewA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T12:39:54.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cards.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Cards.cs",
+              "RelativeDocumentMoniker": "Back-end\\Model\\Cards.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Cards.cs",
+              "RelativeToolTip": "Back-end\\Model\\Cards.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwBUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Back-end\\Model",
+              "WhenOpened": "2025-07-31T12:39:54.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Entity",
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Game.cs",
+              "RelativeDocumentMoniker": "Back-end\\Model\\Game.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Game.cs",
+              "RelativeToolTip": "Back-end\\Model\\Game.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Back-end\\Model",
+              "WhenOpened": "2025-07-31T20:06:36.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Turn.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Turn.cs",
+              "RelativeDocumentMoniker": "Back-end\\Model\\Turn.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Turn.cs",
+              "RelativeToolTip": "Back-end\\Model\\Turn.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:27:35.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CardsDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\CardsDto\\CardsDto.cs",
+              "RelativeDocumentMoniker": "Back-end\\Dto\\CardsDto\\CardsDto.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\CardsDto\\CardsDto.cs",
+              "RelativeToolTip": "Back-end\\Dto\\CardsDto\\CardsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T21:23:32.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GameDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\GameDto\\GameDto.cs",
+              "RelativeDocumentMoniker": "Back-end\\Dto\\GameDto\\GameDto.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\GameDto\\GameDto.cs",
+              "RelativeToolTip": "Back-end\\Dto\\GameDto\\GameDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T20:26:15.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MazoDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\MazoDto\\MazoDto.cs",
+              "RelativeDocumentMoniker": "Back-end\\Dto\\MazoDto\\MazoDto.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\MazoDto\\MazoDto.cs",
+              "RelativeToolTip": "Back-end\\Dto\\MazoDto\\MazoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T20:26:28.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RoundDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\RaundDto\\RoundDto.cs",
+              "RelativeDocumentMoniker": "Back-end\\Dto\\RaundDto\\RoundDto.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\RaundDto\\RoundDto.cs",
+              "RelativeToolTip": "Back-end\\Dto\\RaundDto\\RoundDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T20:26:43.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Mazo.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Mazo.cs",
+              "RelativeDocumentMoniker": "Back-end\\Model\\Mazo.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Mazo.cs",
+              "RelativeToolTip": "Back-end\\Model\\Mazo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T19:17:02.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Room.cs",
+              "RelativeDocumentMoniker": "Back-end\\Model\\Room.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Room.cs",
+              "RelativeToolTip": "Back-end\\Model\\Room.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T12:39:53.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\UserDto\\UserDto.cs",
+              "RelativeDocumentMoniker": "Back-end\\Dto\\UserDto\\UserDto.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\UserDto\\UserDto.cs",
+              "RelativeToolTip": "Back-end\\Dto\\UserDto\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Back-end\\Dto\\UserDto",
+              "WhenOpened": "2025-07-31T20:27:11.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EntityBase.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Base\\EntityBase.cs",
+              "RelativeDocumentMoniker": "Back-end\\Base\\EntityBase.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Base\\EntityBase.cs",
+              "RelativeToolTip": "Back-end\\Base\\EntityBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T12:39:51.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RoomDto.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\RoomDto\\RoomDto.cs",
+              "RelativeDocumentMoniker": "Back-end\\Dto\\RoomDto\\RoomDto.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\RoomDto\\RoomDto.cs",
+              "RelativeToolTip": "Back-end\\Dto\\RoomDto\\RoomDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T20:27:00.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Entity.csproj",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj",
               "RelativeDocumentMoniker": "Back-end\\Entity.csproj",
-              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj*",
-              "RelativeToolTip": "Back-end\\Entity.csproj*",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj",
+              "RelativeToolTip": "Back-end\\Entity.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-07-30T19:58:06.297Z",
@@ -43,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 14,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Class1.cs",
               "RelativeDocumentMoniker": "Business\\Class1.cs",
@@ -51,12 +275,11 @@
               "RelativeToolTip": "Business\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T19:58:01.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T19:58:01.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Utilities\\Class1.cs",
               "RelativeDocumentMoniker": "Utilities\\Class1.cs",
@@ -64,12 +287,11 @@
               "RelativeToolTip": "Utilities\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T19:57:51.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T19:57:51.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Class1.cs",
               "RelativeDocumentMoniker": "Data\\Class1.cs",
@@ -77,8 +299,7 @@
               "RelativeToolTip": "Data\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T19:57:39.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T19:57:39.776Z"
             }
           ]
         }
