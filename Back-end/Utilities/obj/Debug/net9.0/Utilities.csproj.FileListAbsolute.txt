@@ -1,0 +1,6 @@
+C:\Users\Aprendiz\Desktop\Bootcamp-Proyecto\Back-end\Utilities\obj\Debug\net9.0\Utilities.csproj.AssemblyReference.cache
+C:\Users\Aprendiz\Desktop\Bootcamp-Proyecto\Back-end\Utilities\obj\Debug\net9.0\Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aprendiz\Desktop\Bootcamp-Proyecto\Back-end\Utilities\obj\Debug\net9.0\Utilities.AssemblyInfoInputs.cache
+C:\Users\Aprendiz\Desktop\Bootcamp-Proyecto\Back-end\Utilities\obj\Debug\net9.0\Utilities.AssemblyInfo.cs
+C:\Users\Aprendiz\Desktop\Bootcamp-Proyecto\Back-end\Utilities\obj\Debug\net9.0\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\Aprendiz\Desktop\Bootcamp-Proyecto\Back-end\Utilities\obj\Debug\net9.0\Utilities.sourcelink.json

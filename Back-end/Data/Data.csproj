@@ -6,4 +6,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Implements\MazoData.cs" />
+    <Compile Remove="Interfaces\IMazoData.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.Deployment" Version="9.0.2.34" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Back-end\Entity.csproj" />
+  </ItemGroup>
+
 </Project>

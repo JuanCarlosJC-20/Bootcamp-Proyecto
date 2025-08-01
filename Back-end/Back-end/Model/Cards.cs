@@ -1,4 +1,4 @@
-﻿using Back_end.Base;
+﻿using Back_end.Model.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Back_end.Model
 {
-    public class Cards : EntityBase
+    public class Cards : BaseModel
     {
         public string Name { get; set; }
         public string image { get; set; }
@@ -17,10 +17,12 @@ namespace Back_end.Model
         public int Endurance { get; set; }
         public int Power { get; set; }
         public int Scope { get; set; }
-        public string Category { get; set; }    
+        public string Category { get; set; }
 
-        public int idMazo { get; set; } 
-        public Mazo Mazo { get; set; }
+
+        // Foreign Keys
+        public int IdGame { get; set; } 
+        public Game Game { get; set; }
 
     }
 }

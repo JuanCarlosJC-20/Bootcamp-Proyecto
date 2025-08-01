@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Back_end.Base;
 using System.Threading.Tasks;
+using Back_end.Model.Base;
+
 
 namespace Back_end.Dto.RoomDto
 {
-    public class RoomDto : BaseEntity
+    public class RoomDto : BaseDto
     {
+        public string RoomName { get; set; }
+        public int NumPlayers { get; set; }
+        public int PlayerWinner { get; set; }
+
+
+
     }
 }
