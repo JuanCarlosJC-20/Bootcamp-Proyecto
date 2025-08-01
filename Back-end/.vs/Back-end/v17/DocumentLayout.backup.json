@@ -3,8 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68C7081E-41CD-4A89-8947-9A9A8EE1C301}|Business\\Business.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\business\\implements\\basebusiness\\basebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68C7081E-41CD-4A89-8947-9A9A8EE1C301}|Business\\Business.csproj|solutionrelative:business\\implements\\basebusiness\\basebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68C7081E-41CD-4A89-8947-9A9A8EE1C301}|Business\\Business.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\business\\interfaces\\ibasebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68C7081E-41CD-4A89-8947-9A9A8EE1C301}|Business\\Business.csproj|solutionrelative:business\\interfaces\\ibasebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|solutionrelative:web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|solutionrelative:web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\web\\serviceextension\\applicationservicessextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|solutionrelative:web\\serviceextension\\applicationservicessextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\web\\serviceextension\\exceptionmiddlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|solutionrelative:web\\serviceextension\\exceptionmiddlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\web\\serviceextension\\swaggerextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|solutionrelative:web\\serviceextension\\swaggerextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|solutionrelative:web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519AF6DA-E9E5-4A30-9528-DAB305B261BC}|Data\\Data.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\data\\interfaces\\icardsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519AF6DA-E9E5-4A30-9528-DAB305B261BC}|Data\\Data.csproj|solutionrelative:data\\interfaces\\icardsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\web\\web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|solutionrelative:web\\web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\web\\controllers\\implements\\cardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,24 +79,12 @@
       "RelativeMoniker": "D:0:0:{519AF6DA-E9E5-4A30-9528-DAB305B261BC}|Data\\Data.csproj|solutionrelative:data\\interfaces\\igamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{519AF6DA-E9E5-4A30-9528-DAB305B261BC}|Data\\Data.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\data\\interfaces\\icardsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{519AF6DA-E9E5-4A30-9528-DAB305B261BC}|Data\\Data.csproj|solutionrelative:data\\interfaces\\icardsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\web\\controllers\\implements\\basecontroller\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\basecontroller\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\web\\controllers\\interfaces\\ibasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5347C512-C10B-449D-8E33-72F21AB56E43}|Web\\Web.csproj|solutionrelative:web\\controllers\\interfaces\\ibasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68C7081E-41CD-4A89-8947-9A9A8EE1C301}|Business\\Business.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\business\\interfaces\\ibasebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68C7081E-41CD-4A89-8947-9A9A8EE1C301}|Business\\Business.csproj|solutionrelative:business\\interfaces\\ibasebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68C7081E-41CD-4A89-8947-9A9A8EE1C301}|Business\\Business.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\business\\implements\\basebusiness\\basebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68C7081E-41CD-4A89-8947-9A9A8EE1C301}|Business\\Business.csproj|solutionrelative:business\\implements\\basebusiness\\basebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68C7081E-41CD-4A89-8947-9A9A8EE1C301}|Business\\Business.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\business\\implements\\basebusiness\\abasebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -191,10 +219,6 @@
       "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\model\\basemodel\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|c:\\users\\aprendiz\\desktop\\bootcamp-proyecto\\back-end\\back-end\\model\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A8BE243-BCAA-405E-88AA-E09AD6360203}|Back-end\\Entity.csproj|solutionrelative:back-end\\model\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -249,123 +273,125 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Web\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Web\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-01T21:00:43.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\appsettings.json",
+              "RelativeDocumentMoniker": "Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\appsettings.json",
+              "RelativeToolTip": "Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-01T20:58:57.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BaseBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Implements\\BaseBusiness\\BaseBusiness.cs",
+              "RelativeDocumentMoniker": "Business\\Implements\\BaseBusiness\\BaseBusiness.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Implements\\BaseBusiness\\BaseBusiness.cs",
+              "RelativeToolTip": "Business\\Implements\\BaseBusiness\\BaseBusiness.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAqwBIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Business\\Implements\\BaseBusiness",
+              "WhenOpened": "2025-08-01T14:19:32.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IBaseBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Interfaces\\IBaseBusiness.cs",
+              "RelativeDocumentMoniker": "Business\\Interfaces\\IBaseBusiness.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Interfaces\\IBaseBusiness.cs",
+              "RelativeToolTip": "Business\\Interfaces\\IBaseBusiness.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAAAoAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T13:58:03.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Back-end\\Context\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Back-end\\Context\\ApplicationDbContext.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAQwBkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Back-end\\Context",
+              "WhenOpened": "2025-08-01T11:43:39.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationServicessExtension.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\ServiceExtension\\ApplicationServicessExtension.cs",
+              "RelativeDocumentMoniker": "Web\\ServiceExtension\\ApplicationServicessExtension.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\ServiceExtension\\ApplicationServicessExtension.cs",
+              "RelativeToolTip": "Web\\ServiceExtension\\ApplicationServicessExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T20:37:20.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SwaggerExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\ServiceExtension\\SwaggerExtensions.cs",
+              "RelativeDocumentMoniker": "Web\\ServiceExtension\\SwaggerExtensions.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\ServiceExtension\\SwaggerExtensions.cs",
+              "RelativeToolTip": "Web\\ServiceExtension\\SwaggerExtensions.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T20:38:12.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Program.cs",
               "RelativeDocumentMoniker": "Web\\Program.cs",
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Program.cs",
               "RelativeToolTip": "Web\\Program.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAACAAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-01T14:58:59.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GameData.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\GameData.cs",
-              "RelativeDocumentMoniker": "Data\\Implements\\GameData.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\GameData.cs",
-              "RelativeToolTip": "Data\\Implements\\GameData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T12:00:39.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RoomData.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\RoomData.cs",
-              "RelativeDocumentMoniker": "Data\\Implements\\RoomData.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\RoomData.cs",
-              "RelativeToolTip": "Data\\Implements\\RoomData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T12:01:08.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TurnData.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\TurnData.cs",
-              "RelativeDocumentMoniker": "Data\\Implements\\TurnData.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\TurnData.cs",
-              "RelativeToolTip": "Data\\Implements\\TurnData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T14:51:53.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "RoundData.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\RoundData.cs",
-              "RelativeDocumentMoniker": "Data\\Implements\\RoundData.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\RoundData.cs",
-              "RelativeToolTip": "Data\\Implements\\RoundData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAADAAAAAAAAAA==",
+              "Title": "ExceptionMiddlewareExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\ServiceExtension\\ExceptionMiddlewareExtensions.cs",
+              "RelativeDocumentMoniker": "Web\\ServiceExtension\\ExceptionMiddlewareExtensions.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\ServiceExtension\\ExceptionMiddlewareExtensions.cs",
+              "RelativeToolTip": "Web\\ServiceExtension\\ExceptionMiddlewareExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T12:07:14.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CardsData.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\CardsData.cs",
-              "RelativeDocumentMoniker": "Data\\Implements\\CardsData.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\CardsData.cs",
-              "RelativeToolTip": "Data\\Implements\\CardsData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T12:00:20.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Utilities\\Mappers\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Utilities\\Mappers\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Utilities\\Mappers\\MappingProfile.cs",
-              "RelativeToolTip": "Utilities\\Mappers\\MappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T15:51:33.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CardsController.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Implements\\CardsController.cs",
-              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\CardsController.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Implements\\CardsController.cs",
-              "RelativeToolTip": "Web\\Controllers\\Implements\\CardsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T15:21:01.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IGameData.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Interfaces\\IGameData.cs",
-              "RelativeDocumentMoniker": "Data\\Interfaces\\IGameData.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Interfaces\\IGameData.cs",
-              "RelativeToolTip": "Data\\Interfaces\\IGameData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T11:47:04.489Z",
+              "WhenOpened": "2025-08-01T20:37:47.512Z",
               "EditorCaption": ""
             },
             {
@@ -384,6 +410,123 @@
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "Web.csproj",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Web.csproj",
+              "RelativeDocumentMoniker": "Web\\Web.csproj",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Web.csproj",
+              "RelativeToolTip": "Web\\Web.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-01T20:41:18.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RoomData.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\RoomData.cs",
+              "RelativeDocumentMoniker": "Data\\Implements\\RoomData.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\RoomData.cs",
+              "RelativeToolTip": "Data\\Implements\\RoomData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T12:01:08.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GameData.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\GameData.cs",
+              "RelativeDocumentMoniker": "Data\\Implements\\GameData.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\GameData.cs",
+              "RelativeToolTip": "Data\\Implements\\GameData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T12:00:39.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TurnData.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\TurnData.cs",
+              "RelativeDocumentMoniker": "Data\\Implements\\TurnData.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\TurnData.cs",
+              "RelativeToolTip": "Data\\Implements\\TurnData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T14:51:53.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RoundData.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\RoundData.cs",
+              "RelativeDocumentMoniker": "Data\\Implements\\RoundData.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\RoundData.cs",
+              "RelativeToolTip": "Data\\Implements\\RoundData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T12:07:14.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CardsData.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\CardsData.cs",
+              "RelativeDocumentMoniker": "Data\\Implements\\CardsData.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\CardsData.cs",
+              "RelativeToolTip": "Data\\Implements\\CardsData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T12:00:20.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Utilities\\Mappers\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Utilities\\Mappers\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Utilities\\Mappers\\MappingProfile.cs",
+              "RelativeToolTip": "Utilities\\Mappers\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T15:51:33.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CardsController.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Implements\\CardsController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\CardsController.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Implements\\CardsController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\CardsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T15:21:01.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IGameData.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Interfaces\\IGameData.cs",
+              "RelativeDocumentMoniker": "Data\\Interfaces\\IGameData.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Interfaces\\IGameData.cs",
+              "RelativeToolTip": "Data\\Interfaces\\IGameData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T11:47:04.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "BaseController.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Implements\\BaseController\\BaseController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\BaseController\\BaseController.cs",
@@ -397,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "IBaseController.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Interfaces\\IBaseController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Interfaces\\IBaseController.cs",
@@ -411,40 +554,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IBaseBusiness.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Interfaces\\IBaseBusiness.cs",
-              "RelativeDocumentMoniker": "Business\\Interfaces\\IBaseBusiness.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Interfaces\\IBaseBusiness.cs",
-              "RelativeToolTip": "Business\\Interfaces\\IBaseBusiness.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T13:58:03.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BaseBusiness.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Implements\\BaseBusiness\\BaseBusiness.cs",
-              "RelativeDocumentMoniker": "Business\\Implements\\BaseBusiness\\BaseBusiness.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Implements\\BaseBusiness\\BaseBusiness.cs",
-              "RelativeToolTip": "Business\\Implements\\BaseBusiness\\BaseBusiness.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAwwBIAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "Business\\Implements\\BaseBusiness",
-              "WhenOpened": "2025-08-01T14:19:32.278Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "ABaseBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Implements\\BaseBusiness\\ABaseBusiness.cs",
               "RelativeDocumentMoniker": "Business\\Implements\\BaseBusiness\\ABaseBusiness.cs",
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Implements\\BaseBusiness\\ABaseBusiness.cs",
               "RelativeToolTip": "Business\\Implements\\BaseBusiness\\ABaseBusiness.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAABkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwA0AAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "OverriddenGroupName": "Business\\Implements\\BaseBusiness",
               "WhenOpened": "2025-08-01T14:19:10.868Z",
@@ -452,7 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "CardsBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Implements\\CardsBusiness.cs",
               "RelativeDocumentMoniker": "Business\\Implements\\CardsBusiness.cs",
@@ -466,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "GameBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Implements\\GameBusiness.cs",
               "RelativeDocumentMoniker": "Business\\Implements\\GameBusiness.cs",
@@ -479,7 +595,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "RoomBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Implements\\RoomBusiness.cs",
               "RelativeDocumentMoniker": "Business\\Implements\\RoomBusiness.cs",
@@ -492,7 +608,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "RoundBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Implements\\RoundBusiness.cs",
               "RelativeDocumentMoniker": "Business\\Implements\\RoundBusiness.cs",
@@ -505,7 +621,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "TurnBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Implements\\TurnBusiness.cs",
               "RelativeDocumentMoniker": "Business\\Implements\\TurnBusiness.cs",
@@ -518,7 +634,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "IGameBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Interfaces\\IGameBusiness.cs",
               "RelativeDocumentMoniker": "Business\\Interfaces\\IGameBusiness.cs",
@@ -531,7 +647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "IRoundBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Interfaces\\IRoundBusiness.cs",
               "RelativeDocumentMoniker": "Business\\Interfaces\\IRoundBusiness.cs",
@@ -544,7 +660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "ITurnBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Interfaces\\ITurnBusiness.cs",
               "RelativeDocumentMoniker": "Business\\Interfaces\\ITurnBusiness.cs",
@@ -557,7 +673,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "ICardsBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Interfaces\\ICardsBusiness.cs",
               "RelativeDocumentMoniker": "Business\\Interfaces\\ICardsBusiness.cs",
@@ -570,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "RoundController.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Implements\\RoundController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\RoundController.cs",
@@ -583,7 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "IRoomBusiness.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Interfaces\\IRoomBusiness.cs",
               "RelativeDocumentMoniker": "Business\\Interfaces\\IRoomBusiness.cs",
@@ -596,7 +712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "GameController.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Implements\\GameController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\GameController.cs",
@@ -609,7 +725,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "TurnController.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Implements\\TurnController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\TurnController.cs",
@@ -622,7 +738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "ICardsController.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Interfaces\\ICardsController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Interfaces\\ICardsController.cs",
@@ -635,7 +751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "IGameController.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Interfaces\\IGameController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Interfaces\\IGameController.cs",
@@ -648,7 +764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "IRoomController.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Interfaces\\IRoomController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Interfaces\\IRoomController.cs",
@@ -661,7 +777,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "IRoundController.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Interfaces\\IRoundController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Interfaces\\IRoundController.cs",
@@ -674,7 +790,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "ITurnController.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Interfaces\\ITurnController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Interfaces\\ITurnController.cs",
@@ -687,7 +803,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 40,
               "Title": "Data.csproj",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Data.csproj",
               "RelativeDocumentMoniker": "Data\\Data.csproj",
@@ -700,26 +816,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 41,
               "Title": "GameDto.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\GameDto\\GameDto.cs",
               "RelativeDocumentMoniker": "Back-end\\Dto\\GameDto\\GameDto.cs",
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\GameDto\\GameDto.cs",
               "RelativeToolTip": "Back-end\\Dto\\GameDto\\GameDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-01T11:33:46.781Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "CardsDto.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\CardsDto\\CardsDto.cs",
               "RelativeDocumentMoniker": "Back-end\\Dto\\CardsDto\\CardsDto.cs",
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\CardsDto\\CardsDto.cs",
               "RelativeToolTip": "Back-end\\Dto\\CardsDto\\CardsDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAEBVwBIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "OverriddenGroupName": "Back-end\\Dto\\CardsDto",
               "WhenOpened": "2025-08-01T11:38:40.864Z",
@@ -727,7 +843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Game.cs",
               "RelativeDocumentMoniker": "Back-end\\Model\\Game.cs",
@@ -740,20 +856,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 44,
               "Title": "Cards.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Cards.cs",
               "RelativeDocumentMoniker": "Back-end\\Model\\Cards.cs",
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Cards.cs",
               "RelativeToolTip": "Back-end\\Model\\Cards.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-01T12:21:18.269Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 45,
               "Title": "RoomController.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\Implements\\RoomController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\RoomController.cs",
@@ -766,7 +882,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 46,
               "Title": "TurnDto.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\TurnDto\\TurnDto.cs",
               "RelativeDocumentMoniker": "Back-end\\Dto\\TurnDto\\TurnDto.cs",
@@ -779,7 +895,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 47,
               "Title": "BaseDto.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\BaseDto.cs",
               "RelativeDocumentMoniker": "Back-end\\Dto\\BaseDto.cs",
@@ -792,7 +908,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 48,
               "Title": "RoundDto.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\RoundDto\\RoundDto.cs",
               "RelativeDocumentMoniker": "Back-end\\Dto\\RoundDto\\RoundDto.cs",
@@ -805,7 +921,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 49,
               "Title": "RoomDto.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Dto\\RoomDto\\RoomDto.cs",
               "RelativeDocumentMoniker": "Back-end\\Dto\\RoomDto\\RoomDto.cs",
@@ -818,7 +934,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 52,
               "Title": "DataException.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Utilities\\Exceptions\\DataException.cs",
               "RelativeDocumentMoniker": "Utilities\\Exceptions\\DataException.cs",
@@ -831,7 +947,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 51,
               "Title": "ControllerException.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Utilities\\Exceptions\\ControllerException.cs",
               "RelativeDocumentMoniker": "Utilities\\Exceptions\\ControllerException.cs",
@@ -844,7 +960,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 50,
               "Title": "BusinessException.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Utilities\\Exceptions\\BusinessException.cs",
               "RelativeDocumentMoniker": "Utilities\\Exceptions\\BusinessException.cs",
@@ -857,7 +973,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 53,
               "Title": "BaseModel.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\BaseModel\\BaseModel.cs",
               "RelativeDocumentMoniker": "Back-end\\Model\\BaseModel\\BaseModel.cs",
@@ -870,21 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Context\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Back-end\\Context\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Context\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Back-end\\Context\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwIYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "Back-end\\Context",
-              "WhenOpened": "2025-08-01T11:43:39.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 54,
               "Title": "Room.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Room.cs",
               "RelativeDocumentMoniker": "Back-end\\Model\\Room.cs",
@@ -897,7 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 55,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Web\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\WeatherForecastController.cs",
@@ -910,7 +1012,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 56,
               "Title": "IRoundData.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Interfaces\\IRoundData.cs",
               "RelativeDocumentMoniker": "Data\\Interfaces\\IRoundData.cs",
@@ -923,7 +1025,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 57,
               "Title": "tmp406.tmp.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\AppData\\Local\\Temp\\tmp406.tmp.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\tmp406.tmp.cs",
@@ -934,7 +1036,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 58,
               "Title": "Turn.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Turn.cs",
               "RelativeDocumentMoniker": "Back-end\\Model\\Turn.cs",
@@ -948,7 +1050,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 59,
               "Title": "Round.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Model\\Round.cs",
               "RelativeDocumentMoniker": "Back-end\\Model\\Round.cs",
@@ -961,7 +1063,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 60,
               "Title": "Business.csproj",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Business.csproj",
               "RelativeDocumentMoniker": "Business\\Business.csproj",
@@ -974,13 +1076,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 61,
               "Title": "BaseData.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\BaseData\\BaseData.cs",
               "RelativeDocumentMoniker": "Data\\Implements\\BaseData\\BaseData.cs",
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\BaseData\\BaseData.cs",
               "RelativeToolTip": "Data\\Implements\\BaseData\\BaseData.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAA9wDQAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowDQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "OverriddenGroupName": "Data\\Implements\\BaseData",
               "WhenOpened": "2025-08-01T12:11:01.768Z",
@@ -988,7 +1090,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 62,
               "Title": "ABaseData.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Implements\\BaseData\\ABaseData.cs",
               "RelativeDocumentMoniker": "Data\\Implements\\BaseData\\ABaseData.cs",
@@ -1001,13 +1103,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 63,
               "Title": "IBaseData.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Interfaces\\IBaseData.cs",
               "RelativeDocumentMoniker": "Data\\Interfaces\\IBaseData.cs",
               "ToolTip": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Interfaces\\IBaseData.cs",
               "RelativeToolTip": "Data\\Interfaces\\IBaseData.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAwAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "OverriddenGroupName": "Data\\Interfaces",
               "WhenOpened": "2025-08-01T11:46:16.863Z",
@@ -1015,7 +1117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 64,
               "Title": "ITurnData.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Interfaces\\ITurnData.cs",
               "RelativeDocumentMoniker": "Data\\Interfaces\\ITurnData.cs",
@@ -1029,7 +1131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 65,
               "Title": "IRoomData.cs",
               "DocumentMoniker": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Interfaces\\IRoomData.cs",
               "RelativeDocumentMoniker": "Data\\Interfaces\\IRoomData.cs",
