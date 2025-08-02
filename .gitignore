@@ -1,0 +1,54 @@
+# ==== NODE / REACT (Frontend) ====
+node_modules/
+build/
+dist/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.vite/
+
+# ==== VS Code ====
+.vscode/
+
+# ==== .NET / C# (Backend) ====
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.cache
+*.log
+*.pdb
+*.mdb
+*.dbmdl
+*.dbml.layout
+*.bak
+*.Backup
+*.nupkg
+*.snupkg
+*.Publish.xml
+*.pubxml
+*.publishproj
+TestResults/
+.vs/
+_ReSharper*/
+.idea/
+*.resharper
+*.DotSettings.user
+Generated_Code/
+
+# Entity Framework Migrations (opcional si no quieres trackear archivos de snapshot)
+**/Migrations/*.Designer.cs
+**/Migrations/*.resx
+
+# ==== General ====
+*.DS_Store
+Thumbs.db
+desktop.ini
