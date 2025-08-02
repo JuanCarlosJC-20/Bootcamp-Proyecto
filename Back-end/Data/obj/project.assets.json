@@ -2899,8 +2899,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\back-end\\Back-end\\Entity.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\back-end\\Back-end\\Entity.csproj"
+            "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj"
             }
           }
         }
@@ -2951,7 +2951,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Microsoft.CrmSdk.Deployment 9.0.2.34 depende de Microsoft.CrmSdk.CoreAssemblies (>= 9.0.2), pero no se encontró Microsoft.CrmSdk.CoreAssemblies 9.0.2. Microsoft.CrmSdk.CoreAssemblies 9.0.2.1 se resolvió en su lugar.",
+      "message": "Microsoft.CrmSdk.Deployment 9.0.2.34 depends on Microsoft.CrmSdk.CoreAssemblies (>= 9.0.2) but Microsoft.CrmSdk.CoreAssemblies 9.0.2 was not found. Microsoft.CrmSdk.CoreAssemblies 9.0.2.1 was resolved instead.",
       "libraryId": "Microsoft.CrmSdk.CoreAssemblies",
       "targetGraphs": [
         "net9.0"
@@ -2961,7 +2961,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Microsoft.CrmSdk.CoreAssemblies 9.0.2.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net9.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "message": "Package 'Microsoft.CrmSdk.CoreAssemblies 9.0.2.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.CrmSdk.CoreAssemblies",
       "targetGraphs": [
         "net9.0"
@@ -2971,7 +2971,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Microsoft.CrmSdk.Deployment 9.0.2.34\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net9.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "message": "Package 'Microsoft.CrmSdk.Deployment 9.0.2.34' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.CrmSdk.Deployment",
       "targetGraphs": [
         "net9.0"
