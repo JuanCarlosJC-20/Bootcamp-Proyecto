@@ -11,8 +11,6 @@ namespace Back_end.Model
     {
         public string RoomName { get; set; }
         public int NumPlayers { get; set; }
-        public int PlayerWinner { get; set; }
-
 
         public Game Game { get; set; }
     }

@@ -29,10 +29,6 @@ namespace Back_end.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<string>("Category")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Damage")
                         .HasColumnType("int");
 
@@ -40,9 +36,6 @@ namespace Back_end.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("Health")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdGame")
                         .HasColumnType("int");
 
                     b.Property<int>("LetterLevel")
@@ -64,8 +57,6 @@ namespace Back_end.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("IdGame");
-
                     b.ToTable("Cards");
                 });
 
@@ -80,10 +71,29 @@ namespace Back_end.Migrations
                     b.Property<int>("GameTime")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdDeckCard")
+                    b.Property<int>("IdPlayerWinner")
                         .HasColumnType("int");
 
                     b.Property<int>("IdRoom")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("IdRoom")
+                        .IsUnique();
+
+                    b.ToTable("Games");
+                });
+
+            modelBuilder.Entity("Back_end.Model.Player", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<int>("IdGame")
                         .HasColumnType("int");
 
                     b.Property<string>("NamePlayer")
@@ -92,10 +102,32 @@ namespace Back_end.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("IdRoom")
-                        .IsUnique();
+                    b.HasIndex("IdGame");
 
-                    b.ToTable("Game");
+                    b.ToTable("Players");
+                });
+
+            modelBuilder.Entity("Back_end.Model.PlayerCard", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<int>("IdCard")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdPlayer")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("IdCard");
+
+                    b.HasIndex("IdPlayer");
+
+                    b.ToTable("PlayerCards");
                 });
 
             modelBuilder.Entity("Back_end.Model.Room", b =>
@@ -109,16 +141,13 @@ namespace Back_end.Migrations
                     b.Property<int>("NumPlayers")
                         .HasColumnType("int");
 
-                    b.Property<int>("PlayerWinner")
-                        .HasColumnType("int");
-
                     b.Property<string>("RoomName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
-                    b.ToTable("Room");
+                    b.ToTable("Rooms");
                 });
 
             modelBuilder.Entity("Back_end.Model.Round", b =>
@@ -136,15 +165,17 @@ namespace Back_end.Migrations
                     b.Property<int>("IdGame")
                         .HasColumnType("int");
 
-                    b.Property<string>("NameWinner")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("IdPlayerWinner")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NumRound")
+                        .HasColumnType("int");
 
                     b.HasKey("id");
 
                     b.HasIndex("IdGame");
 
-                    b.ToTable("Round");
+                    b.ToTable("Rounds");
                 });
 
             modelBuilder.Entity("Back_end.Model.Turn", b =>
@@ -155,33 +186,23 @@ namespace Back_end.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<int>("IdPlayer")
+                        .HasColumnType("int");
+
                     b.Property<int>("IdRound")
                         .HasColumnType("int");
 
-                    b.Property<string>("NamePlayer")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("attribute")
+                    b.Property<string>("ValueAttribute")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
+                    b.HasIndex("IdPlayer");
+
                     b.HasIndex("IdRound");
 
                     b.ToTable("Turn");
-                });
-
-            modelBuilder.Entity("Back_end.Model.Cards", b =>
-                {
-                    b.HasOne("Back_end.Model.Game", "Game")
-                        .WithMany("Cards")
-                        .HasForeignKey("IdGame")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Game");
                 });
 
             modelBuilder.Entity("Back_end.Model.Game", b =>
@@ -195,10 +216,40 @@ namespace Back_end.Migrations
                     b.Navigation("Room");
                 });
 
+            modelBuilder.Entity("Back_end.Model.Player", b =>
+                {
+                    b.HasOne("Back_end.Model.Game", "Game")
+                        .WithMany("Players")
+                        .HasForeignKey("IdGame")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Game");
+                });
+
+            modelBuilder.Entity("Back_end.Model.PlayerCard", b =>
+                {
+                    b.HasOne("Back_end.Model.Cards", "Card")
+                        .WithMany("PlayerCards")
+                        .HasForeignKey("IdCard")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Back_end.Model.Player", "Player")
+                        .WithMany("PlayerCards")
+                        .HasForeignKey("IdPlayer")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Card");
+
+                    b.Navigation("Player");
+                });
+
             modelBuilder.Entity("Back_end.Model.Round", b =>
                 {
                     b.HasOne("Back_end.Model.Game", "Game")
-                        .WithMany("Round")
+                        .WithMany("Rounds")
                         .HasForeignKey("IdGame")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -208,20 +259,40 @@ namespace Back_end.Migrations
 
             modelBuilder.Entity("Back_end.Model.Turn", b =>
                 {
+                    b.HasOne("Back_end.Model.Player", "Player")
+                        .WithMany("Turn")
+                        .HasForeignKey("IdPlayer")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.HasOne("Back_end.Model.Round", "Round")
                         .WithMany("Turn")
                         .HasForeignKey("IdRound")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.Navigation("Player");
 
                     b.Navigation("Round");
                 });
 
+            modelBuilder.Entity("Back_end.Model.Cards", b =>
+                {
+                    b.Navigation("PlayerCards");
+                });
+
             modelBuilder.Entity("Back_end.Model.Game", b =>
                 {
-                    b.Navigation("Cards");
+                    b.Navigation("Players");
 
-                    b.Navigation("Round");
+                    b.Navigation("Rounds");
+                });
+
+            modelBuilder.Entity("Back_end.Model.Player", b =>
+                {
+                    b.Navigation("PlayerCards");
+
+                    b.Navigation("Turn");
                 });
 
             modelBuilder.Entity("Back_end.Model.Room", b =>

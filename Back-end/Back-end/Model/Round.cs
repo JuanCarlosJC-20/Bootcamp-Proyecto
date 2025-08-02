@@ -10,7 +10,8 @@ namespace Back_end.Model
     public class Round : BaseModel
     {
         public string Attribute { get; set; }
-        public string NameWinner { get; set; }
+        public int NumRound { get; set; }
+        public int IdPlayerWinner { get; set; }
 
         //Foreign keys
         public int IdGame { get; set; }

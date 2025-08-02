@@ -12,9 +12,5 @@ namespace Back_end.Dto.RoomDto
     {
         public string RoomName { get; set; }
         public int NumPlayers { get; set; }
-        public int PlayerWinner { get; set; }
-
-
-
     }
 }

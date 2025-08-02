@@ -9,18 +9,13 @@ namespace Back_end.Model
 {
     public class Game : BaseModel
     {
-        
-        public string NamePlayer { get; set; }
         public int GameTime { get; set; }
-
-
-        // Foreign Key
-        public int IdDeckCard { get; set; }
+        public int IdPlayerWinner { get; set; }
 
         public int IdRoom { get; set; }
         public Room Room { get; set; }
-        public ICollection<Cards> Cards { get; set; }
 
-        public ICollection<Round> Round { get; set; }
+        public ICollection<Player> Players { get; set; }
+        public ICollection<Round> Rounds { get; set; }
     }
 }

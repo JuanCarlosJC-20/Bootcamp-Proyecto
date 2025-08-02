@@ -17,12 +17,7 @@ namespace Back_end.Model
         public int Endurance { get; set; }
         public int Power { get; set; }
         public int Scope { get; set; }
-        public string Category { get; set; }
 
-
-        // Foreign Keys
-        public int IdGame { get; set; } 
-        public Game Game { get; set; }
-
+        public ICollection<PlayerCard> PlayerCards{ get; set;}
     }
 }

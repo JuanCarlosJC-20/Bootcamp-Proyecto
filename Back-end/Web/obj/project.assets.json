@@ -4874,11 +4874,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\web\\Web.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\back-end\\web\\Web.csproj",
       "projectName": "Web",
-      "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\web\\Web.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\back-end\\web\\Web.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\web\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\back-end\\web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4899,14 +4899,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj"
+            "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\back-end\\Back-end\\Entity.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\back-end\\Back-end\\Entity.csproj"
             },
             "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Business.csproj": {
               "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Business.csproj"
             },
-            "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Utilities\\Utilities.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Utilities\\Utilities.csproj"
+            "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\back-end\\Utilities\\Utilities.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\back-end\\Utilities\\Utilities.csproj"
             }
           }
         }

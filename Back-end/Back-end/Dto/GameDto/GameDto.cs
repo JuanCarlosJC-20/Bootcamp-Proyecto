@@ -9,9 +9,8 @@ namespace Back_end.Dto.GameDto
 {
     public class GameDto : BaseDto
     {
-        public string NamePlayer { get; set; }
         public int GameTime { get; set; }
-        public int IdDeckCard {  get; set; }
-        public int IdRoom {  get; set; }
+        public int IdPlayerWinner { get; set; }
+        public int IdRoom { get; set; }
     }
 }

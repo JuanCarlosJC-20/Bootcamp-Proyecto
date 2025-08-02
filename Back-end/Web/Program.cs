@@ -6,6 +6,7 @@ using Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Utilities.Mappers;
 using Back_end.Model;
+using Data.Implements.Base;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +35,10 @@ builder.Services.AddScoped<IBaseData<Room>, RoomData>();
 builder.Services.AddScoped<IRoundData, RoundData>();
 builder.Services.AddScoped<IBaseData<Round>, RoundData>();
 
+builder.Services.AddScoped<IBaseData<Player>, PlayerData>();
+builder.Services.AddScoped<IBaseData<PlayerCard>, PlayerCardData>();
+
+
 builder.Services.AddScoped<ITurnData, TurnData>();
 builder.Services.AddScoped<IBaseData<Turn>, TurnData>();
 
@@ -43,6 +48,11 @@ builder.Services.AddScoped<IGameBusiness, GameBusiness>();
 builder.Services.AddScoped<IRoomBusiness, RoomBusiness>();
 builder.Services.AddScoped<IRoundBusiness, RoundBusiness>();
 builder.Services.AddScoped<ITurnBusiness, TurnBusiness>();
+
+builder.Services.AddScoped<IPlayerData, PlayerData>();
+builder.Services.AddScoped<IPlayerCardData, PlayerCardData>();
+builder.Services.AddScoped<IPlayerBusiness, PlayerBusiness>();
+builder.Services.AddScoped<IPlayerCardBusiness, PlayerCardBusiness>();
 
 
 

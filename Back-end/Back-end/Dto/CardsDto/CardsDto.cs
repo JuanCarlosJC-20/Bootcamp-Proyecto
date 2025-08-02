@@ -17,8 +17,6 @@ namespace Back_end.Dto.CardsDto
         public int Endurance { get; set; }
         public int Power { get; set; }
         public int Scope { get; set; }
-        public string Category { get; set; }
-        public int IdGame { get; set; }
 
     }
 }

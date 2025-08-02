@@ -10,10 +10,9 @@ namespace Back_end.Dto.RaundDto
 {
     public class RoundDto : BaseDto
     {
-        public string Attribute { get; set; } 
-        public string NameWinner { get; set; }
-
-        //Foreign keys
+        public string Attribute { get; set; }
+        public int NumRound { get; set; }
+        public int IdPlayerWinner { get; set; }
         public int IdGame { get; set; }
     }
 }

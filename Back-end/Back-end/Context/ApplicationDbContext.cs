@@ -13,7 +13,6 @@ using System.Threading.Tasks;
 
 namespace Back_end.Context
 {
-    //representa el contexto de la base de datos 
     public class ApplicationDbContext : DbContext
     {
         protected readonly IConfiguration _configuration;
@@ -25,47 +24,74 @@ namespace Back_end.Context
 
         public ApplicationDbContext() { }
 
-        //DB sets
+        // DB sets actualizados - CORREGIDO: Cards en lugar de Card
         public DbSet<Cards> Cards { get; set; }
-        public DbSet<Game> Game { get; set; }
-        public DbSet<Room> Room { get; set; }
-        public DbSet<Round> Round { get; set; }
+        public DbSet<Game> Games { get; set; }
+        public DbSet<Room> Rooms { get; set; }
+        public DbSet<Round> Rounds { get; set; }
         public DbSet<Turn> Turn { get; set; }
+        public DbSet<Player> Players { get; set; }
+        public DbSet<PlayerCard> PlayerCards { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Relaciones de uno a muchos
+            // Configuración de Game-Room (1:1)
+            modelBuilder.Entity<Game>()
+                .HasOne(g => g.Room)
+                .WithOne(r => r.Game)
+                .HasForeignKey<Game>(g => g.IdRoom)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Configuración de Player
+            modelBuilder.Entity<Player>()
+                .HasOne(p => p.Game)
+                .WithMany(g => g.Players)
+                .HasForeignKey(p => p.IdGame)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Configuración de PlayerCard (tabla intermedia)
+            modelBuilder.Entity<PlayerCard>()
+                .HasOne(pc => pc.Player)
+                .WithMany(p => p.PlayerCards)
+                .HasForeignKey(pc => pc.IdPlayer)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<PlayerCard>()
+                .HasOne(pc => pc.Card)
+                .WithMany(c => c.PlayerCards)
+                .HasForeignKey(pc => pc.IdCard)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Configuración de Round
             modelBuilder.Entity<Round>()
-                 .HasOne(r => r.Game)
-                 .WithMany(g => g.Round)
-                 .HasForeignKey(r => r.IdGame);
+                .HasOne(r => r.Game)
+                .WithMany(g => g.Rounds)
+                .HasForeignKey(r => r.IdGame)
+                .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<Cards>()
-             .HasOne(c => c.Game)
-             .WithMany(dc => dc.Cards)
-             .HasForeignKey(c => c.IdGame);
-
-            // Relación Turn -> Round
+            // Configuración de Turn - CAMBIO IMPORTANTE AQUÍ
+            // Usamos NoAction para evitar múltiples rutas de cascada
             modelBuilder.Entity<Turn>()
                 .HasOne(t => t.Round)
-                .WithMany(r => r.Turn)
-                .HasForeignKey(t => t.IdRound);
+                .WithMany(r => r.Turn)  // CORREGIDO: Turns en lugar de Turn
+                .HasForeignKey(t => t.IdRound)
+                .OnDelete(DeleteBehavior.NoAction);  // CAMBIADO A NoAction
 
-            // Relaciones de 1 a 1
-            modelBuilder.Entity<Game>()
-              .HasOne(g => g.Room)
-              .WithOne(r => r.Game)
-              .HasForeignKey<Game>(g => g.IdRoom);
+            modelBuilder.Entity<Turn>()
+                .HasOne(t => t.Player)
+                .WithMany(p => p.Turn)  // CORREGIDO: Turns en lugar de Turn
+                .HasForeignKey(t => t.IdPlayer)
+                .OnDelete(DeleteBehavior.NoAction);  // CAMBIADO A NoAction
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
-
         void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
         {
 
         }
+
         public override int SaveChanges()
         {
             EnsureAudit();
@@ -76,7 +102,6 @@ namespace Back_end.Context
         {
             EnsureAudit();
             return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
-
         }
 
         private void EnsureAudit()
@@ -98,11 +123,8 @@ namespace Back_end.Context
             return await connection.QueryFirstOrDefaultAsync<T>(command.Definition);
         }
 
-
-
         public readonly struct DapperEFCoreCommand : IDisposable
         {
-
             public DapperEFCoreCommand(DbContext context, string text, object parameters, int? timeout, CommandType? type, CancellationToken ct)
             {
                 var transaction = context.Database.CurrentTransaction?.GetDbTransaction();
@@ -122,7 +144,6 @@ namespace Back_end.Context
             public CommandDefinition Definition { get; }
 
             public void Dispose() { }
-
         }
     }
 }

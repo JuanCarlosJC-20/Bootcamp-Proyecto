@@ -1,5 +1,4 @@
-﻿
-using Back_end.Dto;
+﻿using Back_end.Dto;
 using Back_end.Model.Base;
 using Business.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -19,10 +18,6 @@ namespace Web.Controllers.Implements
             _business = business;
             _logger = logger;
         }
-
-
-
-
 
         [HttpGet]
         public virtual async Task<IActionResult> GetAll()
@@ -121,11 +116,7 @@ namespace Web.Controllers.Implements
             }
         }
 
-
         // Método abstracto para obtener el ID de la entidad creada para el CreatedAtAction
         protected abstract int GetEntityId(TDto dto);
     }
 }
-
-
-

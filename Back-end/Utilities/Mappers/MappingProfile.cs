@@ -1,6 +1,8 @@
 ﻿using AutoMapper; // Agrega esta línea para importar el espacio de nombres de AutoMapper
 using Back_end.Dto.CardsDto;
 using Back_end.Dto.GameDto;
+using Back_end.Dto.PlayerCardDto;
+using Back_end.Dto.PlayerDto;
 using Back_end.Dto.RaundDto;
 using Back_end.Dto.RoomDto;
 using Back_end.Dto.TurnDto;
@@ -19,6 +21,8 @@ namespace Utilities.Mappers
             CreateMap<Room, RoomDto>().ReverseMap();
             CreateMap<Round, RoundDto>().ReverseMap();
             CreateMap<Turn, TurnDto>().ReverseMap();
+            CreateMap<Player, PlayerDto>().ReverseMap();
+            CreateMap<PlayerCard, PlayerCardDto>().ReverseMap();
         }
     }
 }

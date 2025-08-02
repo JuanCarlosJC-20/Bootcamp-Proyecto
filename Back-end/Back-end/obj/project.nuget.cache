@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "agY0tNAje3s=",
+  "dgSpecHash": "SuoC0WbLJF0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\back-end\\Back-end\\Entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

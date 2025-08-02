@@ -10,13 +10,13 @@ namespace Back_end.Model
     public class Turn : BaseModel
     {
 
-        public string NamePlayer { get; set; }
-        public string attribute { get; set; }
+       public string ValueAttribute { get; set; }
+         public int IdPlayer { get; set; }
 
         //Forgein keys
         public int IdRound { get; set; }
         public Round Round { get; set; }
 
-
+        public Player Player { get; set; }
     }
 }
