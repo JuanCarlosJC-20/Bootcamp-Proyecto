@@ -1,12 +1,12 @@
 // src/components/CardGrid.jsx
 import React, { useEffect, useState } from 'react';
-import CardItem from './CardItem';
+import CardItem from './Cards';
 
 const CardGrid = () => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    fetch('') // cambia esto por tu endpoint real
+    fetch('http://localhost:5084/api/Cards') // cambia esto por tu endpoint real
       .then(res => res.json())
       .then(data => setCards(data))
       .catch(err => console.error('Error al cargar cartas:', err));

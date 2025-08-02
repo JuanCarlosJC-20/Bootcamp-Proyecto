@@ -22,6 +22,18 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // AutoMapper
 builder.Services.AddAutoMapper(cfg => { }, typeof(MappingProfile));
 
+// CORS Configuration
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
+
 // Data Layer - Registrar tanto las interfaces específicas como IBaseData<T>
 builder.Services.AddScoped<ICardsData, CardsData>();
 builder.Services.AddScoped<IBaseData<Cards>, CardsData>();
@@ -38,7 +50,6 @@ builder.Services.AddScoped<IBaseData<Round>, RoundData>();
 builder.Services.AddScoped<IBaseData<Player>, PlayerData>();
 builder.Services.AddScoped<IBaseData<PlayerCard>, PlayerCardData>();
 
-
 builder.Services.AddScoped<ITurnData, TurnData>();
 builder.Services.AddScoped<IBaseData<Turn>, TurnData>();
 
@@ -54,8 +65,6 @@ builder.Services.AddScoped<IPlayerCardData, PlayerCardData>();
 builder.Services.AddScoped<IPlayerBusiness, PlayerBusiness>();
 builder.Services.AddScoped<IPlayerCardBusiness, PlayerCardBusiness>();
 
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -66,6 +75,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+
+app.UseCors("AllowFrontend"); 
+
 app.UseAuthorization();
 app.MapControllers();
 
