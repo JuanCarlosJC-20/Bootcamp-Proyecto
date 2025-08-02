@@ -9,9 +9,8 @@ namespace Back_end.Dto.TurnDto
 {
     public class TurnDto : BaseDto
     {
-
         public string NamePlayer { get; set; }
-        public string attribute { get; set; }
-        public int IdRonda { get; set; }
+        public string Attribute { get; set; }
+        public int IdRound { get; set; }
     }
 }

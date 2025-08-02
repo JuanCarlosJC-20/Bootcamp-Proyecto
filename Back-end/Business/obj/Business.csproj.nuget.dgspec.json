@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Business.csproj": {}
+    "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj": {
+    "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj",
-        "packagesPath": "C:\\Users\\Aprendiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Aprendiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -91,24 +91,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Business.csproj": {
+    "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\Aprendiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Aprendiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -123,11 +123,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj": {
-                "projectPath": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj"
+              "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj"
               },
-              "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Data.csproj"
+              "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Data.csproj"
               }
             }
           }
@@ -142,7 +142,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -173,24 +173,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Data.csproj": {
+    "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\Aprendiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Aprendiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -205,8 +205,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj": {
-                "projectPath": "C:\\Users\\Aprendiz\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj"
+              "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Bootcamp-Proyecto\\Back-end\\Back-end\\Entity.csproj"
               }
             }
           }
@@ -221,7 +221,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -248,7 +248,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

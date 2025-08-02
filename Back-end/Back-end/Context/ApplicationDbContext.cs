@@ -34,38 +34,31 @@ namespace Back_end.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
-            //Relaciones de uno a mucho
+            // Relaciones de uno a muchos
             modelBuilder.Entity<Round>()
                  .HasOne(r => r.Game)
                  .WithMany(g => g.Round)
                  .HasForeignKey(r => r.IdGame);
-
-
-            modelBuilder.Entity<Round>()
-              .HasOne(r => r.Game)
-              .WithMany(g => g.Round)
-              .HasForeignKey(r => r.IdGame);
-
 
             modelBuilder.Entity<Cards>()
              .HasOne(c => c.Game)
              .WithMany(dc => dc.Cards)
              .HasForeignKey(c => c.IdGame);
 
+            // Relación Turn -> Round
+            modelBuilder.Entity<Turn>()
+                .HasOne(t => t.Round)
+                .WithMany(r => r.Turn)
+                .HasForeignKey(t => t.IdRound);
 
-            //Relaciones de 1 a 1
-
+            // Relaciones de 1 a 1
             modelBuilder.Entity<Game>()
               .HasOne(g => g.Room)
               .WithOne(r => r.Game)
               .HasForeignKey<Game>(g => g.IdRoom);
 
-          
-
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
         }
 
 

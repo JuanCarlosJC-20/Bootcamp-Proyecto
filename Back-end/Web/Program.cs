@@ -1,96 +1,62 @@
 using Back_end.Context;
 using Business.Implements;
-using Business.Implements.BaseBusiness;
 using Business.Interfaces;
 using Data.Implements;
-using Data.Implements.Base;
-using Data.Implements.BaseData;
 using Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Utilities.Mappers;
-using Web.ServiceExtension;
-using FluentValidation.AspNetCore;
-using Swashbuckle.AspNetCore.SwaggerUI; 
-
-
+using Back_end.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add controllers
+// Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddApplicationServices(builder.Configuration);
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-// Reemplaza esta línea:
-// builder.Services.AddAutoMapper(typeof(MappingProfile));
-
-// Por esta línea:
-builder.Services.AddAutoMapper(cfg => { }, typeof(MappingProfile));
-// ...
-
-// Reemplaza la línea problemática por la siguiente, si usas FluentValidation.AspNetCore:
-builder.Services.AddControllers()
-    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>());
-
-// Elimina o comenta la línea original:
-// builder.Services.AddValidatorsFromAssemblyContaining(typeof(Program));
-
-
-// Swagger
-builder.Services.AddSwaggerDocumentation();
-
-// DbContext
+// Entity Framework
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Register generic repositories and business logic
-builder.Services.AddScoped(typeof(IBaseData<>), typeof(BaseData<>));
-builder.Services.AddScoped(typeof(IBaseBusiness<,>), typeof(BaseBusiness<,>));
+// AutoMapper
+builder.Services.AddAutoMapper(cfg => { }, typeof(MappingProfile));
 
+// Data Layer - Registrar tanto las interfaces especÃ­ficas como IBaseData<T>
+builder.Services.AddScoped<ICardsData, CardsData>();
+builder.Services.AddScoped<IBaseData<Cards>, CardsData>();
+
+builder.Services.AddScoped<IGameData, GameData>();
+builder.Services.AddScoped<IBaseData<Game>, GameData>();
+
+builder.Services.AddScoped<IRoomData, RoomData>();
+builder.Services.AddScoped<IBaseData<Room>, RoomData>();
+
+builder.Services.AddScoped<IRoundData, RoundData>();
+builder.Services.AddScoped<IBaseData<Round>, RoundData>();
+
+builder.Services.AddScoped<ITurnData, TurnData>();
+builder.Services.AddScoped<IBaseData<Turn>, TurnData>();
+
+// Business Layer
+builder.Services.AddScoped<ICardsBusiness, CardsBusiness>();
+builder.Services.AddScoped<IGameBusiness, GameBusiness>();
+builder.Services.AddScoped<IRoomBusiness, RoomBusiness>();
+builder.Services.AddScoped<IRoundBusiness, RoundBusiness>();
+builder.Services.AddScoped<ITurnBusiness, TurnBusiness>();
 
 
 
 var app = builder.Build();
 
-// Swagger (solo en desarrollo)
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Sistema de Gestión v1");
-        c.RoutePrefix = string.Empty;
-    });
+    app.UseSwaggerUI();
 }
-
-// Usa la política de CORS registrada en ApplicationServiceExtensions
-app.UseCors("AllowSpecificOrigins");
 
 app.UseHttpsRedirection();
-
-// Autenticación y autorización
-app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
-// Inicializar base de datos y aplicar migraciones
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    try
-    {
-        var dbContext = services.GetRequiredService<ApplicationDbContext>();
-        var logger = services.GetRequiredService<ILogger<Program>>();
-
-        dbContext.Database.Migrate();
-        logger.LogInformation("Base de datos verificada y migraciones aplicadas exitosamente.");
-    }
-    catch (Exception ex)
-    {
-        var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "Ocurrió un error durante la migración de la base de datos.");
-    }
-}
 
 app.Run();

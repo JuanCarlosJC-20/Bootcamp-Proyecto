@@ -9,18 +9,13 @@ namespace Back_end.Model
 {
     public class Round : BaseModel
     {
-        public string atrribute { get; set; }
+        public string Attribute { get; set; }
         public string NameWinner { get; set; }
 
-        //Foreing keys
-
+        //Foreign keys
         public int IdGame { get; set; }
         public Game Game { get; set; }
 
-        public ICollection<Turn> Turn {  get; set; }
-
-
-
-
+        public ICollection<Turn> Turn { get; set; }
     }
 }
