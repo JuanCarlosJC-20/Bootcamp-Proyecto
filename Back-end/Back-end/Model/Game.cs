@@ -9,7 +9,7 @@ namespace Back_end.Model
 {
     public class Game : BaseModel
     {
-        public int GameTime { get; set; }
+        public DateTime GameTime { get; set; }
         public int IdPlayerWinner { get; set; }
 
         public int IdRoom { get; set; }

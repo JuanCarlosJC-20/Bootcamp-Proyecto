@@ -10,7 +10,7 @@ const Cards = ({ card }) => {
     setImageError(false);
   };
 
-  const handleImageError = (e) => {
+  const handleImageError = () => {
     console.log('Error loading image for card:', card.name);
     
     // Intentar con diferentes métodos si el primer intento falla
