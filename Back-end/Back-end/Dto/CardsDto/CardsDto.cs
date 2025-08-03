@@ -10,7 +10,7 @@ namespace Back_end.Dto.CardsDto
     public class CardsDto : BaseDto
     {
         public string Name { get; set; } 
-        public string image { get; set; }
+        public string Image { get; set; }
         public int Health { get; set; }
         public int LetterLevel { get; set; }
         public int Damage { get; set; }

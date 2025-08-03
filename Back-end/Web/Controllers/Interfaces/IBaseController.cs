@@ -6,11 +6,11 @@ namespace Web.Controllers.Interfaces
 {
     public interface IBaseController<TEntity, TDto> where TEntity : class
     {
-        Task<ActionResult> GetAllAsync();
-        Task<ActionResult> GetIdAsync(int id);
-        Task<ActionResult> CreateAsync(TDto dto);
-        Task<ActionResult> UpdateAsync(TDto dto);
-        Task<ActionResult> DeleteAsync(int id);
+        Task<IActionResult> GetAllAsync();
+        Task<IActionResult> GetIdAsync(int id);
+        Task<IActionResult> CreateAsync(TDto dto);
+        Task<IActionResult> UpdateAsync(TDto dto);
+        Task<IActionResult> DeleteAsync(int id);
 
     }
 }

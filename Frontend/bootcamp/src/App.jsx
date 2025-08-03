@@ -10,7 +10,7 @@ function App() {
   return (
 
     //<body className=" min-h-screen bg-cover bg-center" style={{backgroundImage: "url('/fondoAzul.jpeg')"}}>
-        <body className="min-h-screen bg-gradient-to-b from-[#060E42] to-[#475BDF] bg-cover bg-center">
+        <div className="min-h-screen bg-gradient-to-b from-[#060E42] to-[#475BDF] ">
         <BrowserRouter>
       
       <Routes>
@@ -25,7 +25,7 @@ function App() {
       </Routes>
       </BrowserRouter>
       
-    </body>
+    </div >
     
     
   )
