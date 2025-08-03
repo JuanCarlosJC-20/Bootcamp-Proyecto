@@ -4,4 +4,4 @@ export {CardsPage} from "./CardsPage"
 export {LoadingPage} from "./LoadingPages"
 export {StartPage} from "./StartPage"
 export {Room} from "./Room"
-
+export {GamePage} from "./GamePage"
