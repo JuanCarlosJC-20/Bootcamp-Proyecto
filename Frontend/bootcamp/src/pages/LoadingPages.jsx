@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import music from '../assets/loading.mp3'
 import { useNavigate } from 'react-router-dom';
 
 export const LoadingPage = () => {
@@ -13,8 +14,12 @@ export const LoadingPage = () => {
     return () => clearTimeout(timeout);
   }, [navigate]);
 
+
   return (
     <div className="h-screen w-full flex items-center justify-center ">
+      {/* Audio de fondo */}
+      <audio src={music} autoPlay loop />
+      
       <DotLottieReact
         src="https://lottie.host/e04009e1-972a-47a9-b6e9-e31e2298c718/uYdLIN8RUz.lottie"
         loop={true} 
