@@ -18,7 +18,8 @@ const CardStack = ({ playedCards, showCardDetail = false, showLaunchAnimation = 
     <div 
       className="fixed left-1/2 transform -translate-x-1/2"
       style={{ 
-        top: '45%', 
+        top: '25%', 
+        right: '630px',
         transform: 'translate(-50%, -50%)',
         zIndex: getZIndex()
       }}
@@ -47,7 +48,7 @@ const CardStack = ({ playedCards, showCardDetail = false, showLaunchAnimation = 
             key={`${playedCard.playerId}-${index}`}
             className="stacked-card"
             style={{
-              transform: `rotate(${70 + (index * 3)}deg) translate(${index * 1.5}px, ${index * -1.5}px)`,
+              transform: `rotate(${15 + (index * 3)}deg) translate(${index * 1.5}px, ${index * -1.5}px)`,
               zIndex: getZIndex() + index,
             }}
           >
