@@ -11,8 +11,8 @@ const CardGrid = () => {
 
   useEffect(() => {
     setIsLoading(true);
-   fetch('http://localhost:5084/api/Cards')
-    // fetch('https://localhost:7221/api/Cards')
+   //fetch('http://localhost:5084/api/Cards')
+     fetch('https://localhost:7221/api/Cards')
       .then(res => res.json())
       .then(data => {
         setCards(data);

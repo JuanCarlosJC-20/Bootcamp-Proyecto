@@ -9,6 +9,6 @@ namespace Data.Interfaces
 {
     public interface IPlayerData : IBaseData<Player>
     {
-
+        Task<IEnumerable<Player>> GetPlayersByGameIdAsync(int gameId);
     }
 }

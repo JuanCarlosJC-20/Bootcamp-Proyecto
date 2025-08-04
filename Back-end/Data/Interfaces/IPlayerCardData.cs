@@ -9,5 +9,7 @@ namespace Data.Interfaces
 {
     public interface IPlayerCardData : IBaseData<PlayerCard>
     {
+        Task<IEnumerable<PlayerCard>> GetPlayerCardsWithDetailsAsync(int playerId);
+        Task<IEnumerable<PlayerCard>> GetGamePlayerCardsAsync(int gameId);
     }
 }

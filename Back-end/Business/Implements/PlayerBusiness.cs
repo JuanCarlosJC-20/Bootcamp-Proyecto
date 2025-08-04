@@ -21,5 +21,21 @@ namespace Business.Implements
         {
             _playerData = playerData;
         }
+
+        public async Task<IEnumerable<PlayerDto>> GetByGameIdAsync(int gameId)
+        {
+            _logger.LogInformation("Obteniendo jugadores del juego {GameId}", gameId);
+
+            try
+            {
+                var players = await _playerData.GetPlayersByGameIdAsync(gameId);
+                return _mapper.Map<IEnumerable<PlayerDto>>(players);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener jugadores del juego {GameId}", gameId);
+                throw;
+            }
+        }
     }
 }

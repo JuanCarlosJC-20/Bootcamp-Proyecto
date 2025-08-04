@@ -10,5 +10,8 @@ namespace Business.Interfaces
 {
     public interface IPlayerCardBusiness : IBaseBusiness<PlayerCard, PlayerCardDto>
     {
+        Task<List<PlayerCardDto>> AssignCardsToPlayersAsync(int gameId, int cardsPerPlayer = 8);
+        Task<List<PlayerCardDto>> GetPlayerCardsAsync(int playerId);
+        Task<Dictionary<int, List<PlayerCardDto>>> GetGamePlayerCardsAsync(int gameId);
     }
 }

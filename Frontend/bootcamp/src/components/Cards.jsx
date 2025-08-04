@@ -1,10 +1,44 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-const Cards = ({ card }) => {
+const Cards = ({ 
+  card, 
+  size = 'large', 
+  isSelected = false, 
+  isUsed = false, 
+  onClick = null, 
+  className = '' 
+}) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [retryCount, setRetryCount] = useState(0);
   const [isImageVisible, setIsImageVisible] = useState(false);
+
+  // Configuración de tamaños
+  const sizes = {
+    small: { 
+      container: 'w-20 h-28', 
+      image: 'w-12 h-12', 
+      text: 'text-xs',
+      stats: 'text-xs',
+      statsGrid: 'grid-cols-1 gap-1'
+    },
+    medium: { 
+      container: 'w-24 h-32', 
+      image: 'w-16 h-16', 
+      text: 'text-sm',
+      stats: 'text-xs',
+      statsGrid: 'grid-cols-2 gap-1'
+    },
+    large: { 
+      container: 'w-64 h-96', 
+      image: 'w-30 h-50', 
+      text: 'text-md',
+      stats: 'text-sm',
+      statsGrid: 'grid-cols-1 gap-1'
+    }
+  };
+
+  const currentSize = sizes[size];
 
   // Múltiples métodos para obtener la imagen de Google Drive
   const getImageUrl = useCallback((url, attempt = 0) => {
@@ -85,28 +119,46 @@ const Cards = ({ card }) => {
   );
 
   return (
-    <div className="bg-gradient-to-b from-[#4481B3] to-[#2C8246] rounded-xl shadow-xl w-64 h-96  flex flex-col items-center justify-between border-8  border-black hover:shadow-2xl transition-all duration-300 hover:scale-105 transform  ">
+    <div 
+      className={`${currentSize.container} ${
+        size === 'large' 
+          ? 'bg-gradient-to-b from-[#4481B3] to-[#2C8246] border-8 border-black' 
+          : 'bg-white border-4 border-[#980E0E]'
+      } rounded-xl shadow-xl flex flex-col items-center justify-between ${
+        isSelected ? 'border-yellow-400 shadow-2xl' : ''
+      } ${isUsed ? 'opacity-50' : 'shadow-lg'} ${
+        onClick ? 'cursor-pointer hover:scale-105' : ''
+      } transition-all duration-300 transform relative ${className}`}
+      onClick={!isUsed && onClick ? () => onClick(card) : undefined}
+    >
 
-
-    <div className="flex items-center w-64 h-16 rounded-xl bg-gradient-to-r from-[#B7A5A5] to-[#6C6E72]  shadow-md gap-6 mb-2">
-  {/* Nivel de la carta */}
-  <div className="bg-[#D8C9A3] text-black font-bold px-3 py-1 rounded-xl "> Lv
-    {card.letterLevel}
-  </div>
-
-  {/* Nombre de la carta */}
-  <div className="text-white text-md font-bold">
-    {card.name}
-  </div>
-</div>
-
+      {size === 'large' ? (
+        <>
+          {/* Header para cartas grandes */}
+          <div className="flex items-center w-64 h-16 rounded-xl bg-gradient-to-r from-[#B7A5A5] to-[#6C6E72] shadow-md gap-6 mb-2">
+            <div className="bg-[#D8C9A3] text-black font-bold px-3 py-1 rounded-xl">
+              Lv {card.letterLevel}
+            </div>
+            <div className="text-white text-md font-bold">
+              {card.name}
+            </div>
+          </div>
+        </>
+      ) : (
+        <>
+          {/* Header simple para cartas pequeñas/medianas */}
+          <h3 className={`${currentSize.text} font-bold text-center text-gray-800 truncate w-full px-1 mt-2`}>
+            {card.name}
+          </h3>
+        </>
+      )}
         
       {/* Imagen de la carta */}
-      <div className="w-30 h-50 rounded-4xl border-4 border-black justify-center flex bg-gray-100 relative">
+      <div className={`${size === 'large' ? 'w-30 h-50' : currentSize.image} rounded-${size === 'large' ? '4xl' : 'full'} border-${size === 'large' ? '4' : '2'} border-${size === 'large' ? 'black' : 'gray-300'} justify-center flex bg-gray-100 relative overflow-hidden`}>
         {!imageError ? (
           <>
             <img
-              key={`${card.id}-${retryCount}`} // Key único para forzar re-render
+              key={`${card.id}-${retryCount}`}
               src={imageUrl}
               alt={card.name}
               loading="lazy"
@@ -130,31 +182,51 @@ const Cards = ({ card }) => {
         )}
       </div>
 
-      {/* Estadísticas de la carta */}
-      <div className="grid grid-cols-1 gap-1 w-full text-sm text-center mt-2 border-4 border-[#932828] rounded-2xl bg-[#D7C39F]">
-
-        <div className=" rounded-lg  hover:bg-red-200  transition-colors p-1">
-          <div className="font-bold text-black hover:text-red-700 transition-colors">Power {card.power}</div>
+      {/* Estadísticas */}
+      {size === 'large' ? (
+        <div className="grid grid-cols-1 gap-1 w-full text-sm text-center mt-2 border-4 border-[#932828] rounded-2xl bg-[#D7C39F]">
+          <div className="rounded-lg hover:bg-red-200 transition-colors p-1">
+            <div className="font-bold text-black hover:text-red-700 transition-colors">Power {card.power}</div>
+          </div>
+          <div className="p-1 rounded-lg hover:bg-orange-200 transition-colors">
+            <div className="font-bold text-black hover:text-orange-700 transition-colors">Damage {card.damage}</div>
+          </div>
+          <div className="p-1 rounded-lg hover:bg-green-200 transition-colors">
+            <div className="font-bold text-black hover:text-green-700 transition-colors">Health {card.health}</div>
+          </div>
+          <div className="p-1 rounded-lg hover:bg-blue-200 transition-colors">
+            <div className="font-bold text-black hover:text-blue-700 transition-colors">Endurance {card.endurance}</div>
+          </div>
+          <div className="p-1 rounded-lg hover:bg-yellow-200 transition-colors">
+            <div className="font-bold text-black hover:text-yellow-700 transition-colors">Scope {card.scope}</div>
+          </div>
         </div>
-
-        <div className="p-1 rounded-lg  hover:bg-orange-200 transition-colors">
-          <div className="font-bold text-black hover:text-orange-700 transition-colors">Damage {card.damage}</div>
+      ) : size === 'medium' ? (
+        <div className="grid grid-cols-2 gap-1 w-full text-xs mt-2">
+          {[
+            { label: 'Pow', value: card.power, bg: 'bg-red-500' },
+            { label: 'Dmg', value: card.damage, bg: 'bg-orange-500' },
+            { label: 'HP', value: card.health, bg: 'bg-green-500' },
+            { label: 'End', value: card.endurance, bg: 'bg-blue-500' }
+          ].map(({ label, value, bg }) => (
+            <div key={label} className={`${bg} text-white p-1 rounded text-center`}>
+              <div className="font-bold text-xs">{label}</div>
+              <div className="font-black text-xs">{value}</div>
+            </div>
+          ))}
         </div>
-
-        <div className="p-1 rounded-lg  hover:bg-green-200 transition-colors">
-          <div className="font-bold text-black hover:text-green-700 transition-colors">Health {card.health}</div>
+      ) : (
+        <div className="text-xs text-gray-600 text-center">
+          Nivel {card.letterLevel}
         </div>
-
-        <div className="p-1 rounded-lg  hover:bg-blue-200 transition-colors">
-          <div className="font-bold text-black hover:text-blue-700 transition-colors">Endurance {card.endurance}</div>
+      )}
+      
+      {/* Overlay para cartas usadas */}
+      {isUsed && (
+        <div className="absolute inset-0 bg-black bg-opacity-50 rounded-xl flex items-center justify-center">
+          <span className="text-white font-bold text-xs">USADA</span>
         </div>
-
-
-
-        <div className="p-1 rounded-lg   hover:bg-yellow-200 transition-colors">
-          <div className="font-bold text-black hover:text-yellow-700 transition-colors">Scope {card.scope}</div>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -9,9 +9,10 @@ namespace Back_end.Dto.RoomDto
     public class CompleteRoomResponseDto
     {
         public RoomDto Room { get; set; } = new();
-        public GameDto.GameDto Game { get; set; } = new(); 
-        public List<PlayerDto.PlayerDto> Players { get; set; } = new(); 
+        public GameDto.GameDto Game { get; set; } = new();
+        public List<PlayerDto.PlayerDto> Players { get; set; } = new();
+        public List<PlayerCardDto.PlayerCardDto> PlayerCard { get; set; } = new(); // Fixed CS0118 and CS8618
     }
-    }
+}
 
 

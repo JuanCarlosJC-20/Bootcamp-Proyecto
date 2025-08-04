@@ -17,6 +17,7 @@ namespace Business.Implements
     {
         private readonly IGameBusiness _gameBusiness;
         private readonly IPlayerBusiness _playerBusiness;
+        private readonly IPlayerCardBusiness _playerCardBusiness;
         private readonly ApplicationDbContext _context;
 
         public RoomBusiness(
@@ -25,11 +26,13 @@ namespace Business.Implements
             ILogger<RoomBusiness> logger,
             IGameBusiness gameBusiness,
             IPlayerBusiness playerBusiness,
+            IPlayerCardBusiness playerCardBusiness,
             ApplicationDbContext context
         ) : base(data, mapper, logger)
         {
             _gameBusiness = gameBusiness;
             _playerBusiness = playerBusiness;
+            _playerCardBusiness = playerCardBusiness;
             _context = context;
         }
 
@@ -83,15 +86,21 @@ namespace Business.Implements
                         i + 1, playerNames[i], createdPlayer.Id);
                 }
 
+                // 5. Asignar cartas aleatorias a todos los jugadores
+                _logger.LogInformation("Asignando cartas a todos los jugadores del juego {GameId}", createdGame.Id);
+                var assignedCards = await _playerCardBusiness.AssignCardsToPlayersAsync(createdGame.Id, 8);
+                _logger.LogInformation("Se asignaron {CardCount} cartas a los jugadores", assignedCards.Count);
+
                 await transaction.CommitAsync();
-                _logger.LogInformation("Creación completa de sala exitosa. Sala: {RoomId}, Juego: {GameId}, Jugadores: {PlayerCount}", 
-                    createdRoom.Id, createdGame.Id, createdPlayers.Count);
+                _logger.LogInformation("Creación completa de sala exitosa. Sala: {RoomId}, Juego: {GameId}, Jugadores: {PlayerCount}, Cartas asignadas: {CardCount}", 
+                    createdRoom.Id, createdGame.Id, createdPlayers.Count, assignedCards.Count);
 
                 return new CompleteRoomResponseDto
                 {
                     Room = createdRoom,
                     Game = createdGame,
-                    Players = createdPlayers
+                    Players = createdPlayers,
+                    PlayerCard = assignedCards
                 };
             }
             catch (Exception ex)
@@ -102,4 +111,5 @@ namespace Business.Implements
             }
         }
     }
+  
 }

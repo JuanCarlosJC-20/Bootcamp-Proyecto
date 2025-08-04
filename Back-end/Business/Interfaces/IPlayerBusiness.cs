@@ -10,5 +10,6 @@ namespace Business.Interfaces
 {
     public interface IPlayerBusiness : IBaseBusiness<Player, PlayerDto>
     {
+        Task<IEnumerable<PlayerDto>> GetByGameIdAsync(int gameId);
     }
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Cards from '../components/Cards';
 
 export const GamePage = () => {
   const location = useLocation();
@@ -8,7 +9,6 @@ export const GamePage = () => {
   const [currentRound] = useState(1);
   const [timeLeft, setTimeLeft] = useState(0);
   const [selectedAttribute, setSelectedAttribute] = useState('ATAQUE');
-  const [cards, setCards] = useState([]);
   const [playerCards, setPlayerCards] = useState({});
   const [usedCards, setUsedCards] = useState({});
   const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
@@ -24,45 +24,90 @@ export const GamePage = () => {
   useEffect(() => {
     if (location.state) {
       setGameData(location.state);
+      // Inicializar cartas por jugador (esto debería venir del backend)
+      if (location.state.players) {
+        const initialPlayerCards = {};
+        const initialUsedCards = {};
+        
+        location.state.players.forEach(player => {
+          // Por ahora cartas dummy - esto debería cargarse del backend
+          initialPlayerCards[player.id] = [];
+          initialUsedCards[player.id] = [];
+        });
+        
+        setPlayerCards(initialPlayerCards);
+        setUsedCards(initialUsedCards);
+      }
     } else {
       navigate('/home');
     }
   }, [location, navigate]);
 
-  // Cargar cartas
+  // Cargar cartas asignadas del backend
   useEffect(() => {
-    const loadCards = async () => {
-      try {
-        const response = await fetch('http://localhost:5084/api/Cards');
-        const cardsData = await response.json();
-        setCards(cardsData);
-      } catch (error) {
-        console.error('Error al cargar cartas:', error);
+    const loadPlayerCards = async () => {
+      if (gameData?.game?.id) {
+        try {
+          console.log('Cargando cartas del juego:', gameData.game.id);
+          
+          // Llamada al backend para obtener todas las cartas de jugadores del juego
+          const response = await fetch(`https://localhost:7221/api/PlayerCard/game/${gameData.game.id}`);
+          
+          if (!response.ok) {
+            throw new Error(`Error al cargar cartas: ${response.status} - ${response.statusText}`);
+          }
+          
+          const gamePlayerCards = await response.json();
+          console.log('Cartas cargadas del backend:', gamePlayerCards);
+          
+          // Organizar las cartas por jugador
+          const organizedPlayerCards = {};
+          const organizedUsedCards = {};
+          
+          Object.keys(gamePlayerCards).forEach(playerId => {
+            const playerCardData = gamePlayerCards[playerId];
+            
+            // Extraer solo la información de las cartas y marcar las usadas
+            organizedPlayerCards[playerId] = playerCardData.map(pc => pc.card);
+            organizedUsedCards[playerId] = playerCardData
+              .map((pc, index) => pc.isUsed ? index : null)
+              .filter(index => index !== null);
+          });
+          
+          setPlayerCards(organizedPlayerCards);
+          setUsedCards(organizedUsedCards);
+          
+          console.log('Cartas organizadas:', organizedPlayerCards);
+          console.log('Cartas usadas:', organizedUsedCards);
+          
+        } catch (error) {
+          console.error('Error al cargar cartas de jugadores:', error);
+          
+          // Fallback a cartas dummy si hay error
+          const dummyCard = {
+            id: 1,
+            name: "Carta Ejemplo",
+            power: 85,
+            damage: 90,
+            health: 75,
+            endurance: 80,
+            letterLevel: 5,
+            scope: 70,
+            image: "https://drive.google.com/file/d/1example/view?usp=sharing"
+          };
+
+          const initialPlayerCards = {};
+          gameData.players.forEach(player => {
+            initialPlayerCards[player.id] = Array(8).fill(dummyCard);
+          });
+          
+          setPlayerCards(initialPlayerCards);
+          console.log('Usando cartas dummy por error en la carga');
+        }
       }
     };
-    loadCards();
-  }, []);
-
-  // Asignar cartas a jugadores
-  useEffect(() => {
-    if (gameData && cards.length > 0) {
-      const playerCardsMap = {};
-      const usedCardsMap = {};
-      
-      gameData.players.forEach(player => {
-        const playerCardSet = [];
-        for (let i = 0; i < 8; i++) {
-          const randomIndex = Math.floor(Math.random() * cards.length);
-          playerCardSet.push(cards[randomIndex]);
-        }
-        playerCardsMap[player.id] = playerCardSet;
-        usedCardsMap[player.id] = [];
-      });
-      
-      setPlayerCards(playerCardsMap);
-      setUsedCards(usedCardsMap);
-    }
-  }, [gameData, cards]);
+    loadPlayerCards();
+  }, [gameData]);
 
   // Timer
   useEffect(() => {
@@ -72,29 +117,15 @@ export const GamePage = () => {
 
   // Función para calcular la posición en arco con superposición
   const getArcPosition = (index, totalCards) => {
-    // Ángulo total del arco más compacto
-    const totalAngle = 80; // Reducido para que estén más juntas
+    const totalAngle = 80;
     const startAngle = -totalAngle / 2;
-    
-    // Calcular el ángulo para esta carta específica
     const angleStep = totalAngle / (totalCards - 1);
     const currentAngle = startAngle + (angleStep * index);
-    
-    // Radio del arco más pequeño para mayor compactación
     const radius = 150;
-    
-    // Convertir a radianes
     const radians = (currentAngle * Math.PI) / 180;
-    
-    // Calcular posiciones x, y
     const x = Math.sin(radians) * radius;
     const y = Math.cos(radians) * radius;
-    
-    // Rotación de la carta para que siga la curva del arco
-    const rotation = currentAngle * 0.7; // Rotación más pronunciada
-    
-    // Calcular z-index para efecto de abanico
-    // Las cartas del centro (índices medios) tienen mayor z-index
+    const rotation = currentAngle * 0.7;
     const centerIndex = (totalCards - 1) / 2;
     const distanceFromCenter = Math.abs(index - centerIndex);
     const baseZIndex = 10;
@@ -143,7 +174,7 @@ export const GamePage = () => {
     setGamePhase('selection');
   };
 
-  const handleConfirmCard = () => {
+  const handleConfirmCard = async () => {
     if (selectedCard) {
       const currentPlayer = players[currentPlayerIndex];
       
@@ -155,31 +186,54 @@ export const GamePage = () => {
         attributeValue: getAttributeValue(selectedCard, selectedAttribute)
       };
       
-      // Animación de lanzamiento
       setLaunchedCard(newPlayedCard);
       setShowLaunchAnimation(true);
       
-      setTimeout(() => {
-        setPlayedCards(prev => [...prev, newPlayedCard]);
+      try {
+        // Marcar carta como usada en el backend
+        // Nota: Necesitaríamos el ID de PlayerCard para esto, por ahora solo actualizamos el frontend
+        console.log('Marcando carta como usada:', selectedCard);
         
-        // Marcar carta como usada
-        setUsedCards(prev => ({
-          ...prev,
-          [currentPlayer.id]: [...(prev[currentPlayer.id] || []), selectedCard.originalIndex]
-        }));
-        
-        setCurrentPlayerIndex((prev) => (prev + 1) % players.length);
-        
-        if (playedCards.length + 1 === players.length) {
-          setGamePhase('results');
-        } else {
-          setGamePhase('selection');
-        }
-        
-        setShowLaunchAnimation(false);
-        setLaunchedCard(null);
-        handleCloseCardDetail();
-      }, 1500);
+        setTimeout(async () => {
+          setPlayedCards(prev => [...prev, newPlayedCard]);
+          setUsedCards(prev => ({
+            ...prev,
+            [currentPlayer.id]: [...(prev[currentPlayer.id] || []), selectedCard.originalIndex]
+          }));
+          setCurrentPlayerIndex((prev) => (prev + 1) % players.length);
+          
+          if (playedCards.length + 1 === players.length) {
+            setGamePhase('results');
+          } else {
+            setGamePhase('selection');
+          }
+          
+          setShowLaunchAnimation(false);
+          setLaunchedCard(null);
+          handleCloseCardDetail();
+        }, 1500);
+      } catch (error) {
+        console.error('Error al marcar carta como usada:', error);
+        // Continuar con la lógica del frontend aunque falle el backend
+        setTimeout(() => {
+          setPlayedCards(prev => [...prev, newPlayedCard]);
+          setUsedCards(prev => ({
+            ...prev,
+            [currentPlayer.id]: [...(prev[currentPlayer.id] || []), selectedCard.originalIndex]
+          }));
+          setCurrentPlayerIndex((prev) => (prev + 1) % players.length);
+          
+          if (playedCards.length + 1 === players.length) {
+            setGamePhase('results');
+          } else {
+            setGamePhase('selection');
+          }
+          
+          setShowLaunchAnimation(false);
+          setLaunchedCard(null);
+          handleCloseCardDetail();
+        }, 1500);
+      }
     }
   };
 
@@ -189,107 +243,6 @@ export const GamePage = () => {
       'RESISTENCIA': card.endurance, 'NIVEL': card.letterLevel, 'ALCANCE': card.scope
     };
     return mapping[attribute] || 0;
-  };
-
-  // Imagen mejorada sin parpadeo
-  const getImageUrl = (url) => {
-    if (!url) return '';
-    const match = url.match(/[?&]id=([a-zA-Z0-9-_]+)/);
-    if (!match) return url;
-    const fileId = match[1];
-    return `https://lh3.googleusercontent.com/d/${fileId}=w400-h300`;
-  };
-
-  // Componente de carta optimizado SIN BUGS
-  const GameCard = ({ card, onClick, isSelected = false, size = 'small', isUsed = false, className = '' }) => {
-    const [imageLoaded, setImageLoaded] = useState(false);
-    const [imageError, setImageError] = useState(false);
-    
-    const sizes = {
-      small: { container: 'w-20 h-28', image: 'w-12 h-12', text: 'text-xs' },
-      medium: { container: 'w-24 h-32', image: 'w-16 h-16', text: 'text-sm' },
-      large: { container: 'w-56 h-72', image: 'w-32 h-32', text: 'text-base' }
-    };
-
-    const currentSize = sizes[size];
-    const imageUrl = getImageUrl(card.image);
-
-    return (
-      <div 
-        className={`${currentSize.container} bg-white rounded-xl shadow-xl border-4 ${
-          isSelected ? 'border-yellow-400 shadow-2xl' : 'border-[#980E0E]'
-        } ${isUsed ? 'opacity-50' : 'shadow-lg'} transition-all duration-200 flex flex-col items-center justify-between p-2 ${className}`}
-        onClick={!isUsed ? onClick : undefined}
-      >
-        {/* Imagen */}
-        <div className={`${currentSize.image} rounded-full border-2 border-gray-300 flex items-center justify-center overflow-hidden bg-gray-100 relative`}>
-          {!imageError ? (
-            <>
-              <img 
-                src={imageUrl} 
-                alt={card.name} 
-                className={`w-full h-full object-cover transition-opacity duration-500 ${
-                  imageLoaded ? 'opacity-100' : 'opacity-0'
-                }`}
-                onLoad={() => setImageLoaded(true)}
-                onError={() => setImageError(true)}
-                referrerPolicy="no-referrer"
-              />
-              {!imageLoaded && (
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded-full">
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-[#980E0E]"></div>
-                </div>
-              )}
-            </>
-          ) : (
-            <div className={`${currentSize.image} flex flex-col items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 text-gray-600 rounded-full`}>
-              <div className="text-lg">🎴</div>
-              <div className="text-xs font-bold text-center px-1 mt-1">
-                {card.name.split(' ')[0]}
-              </div>
-            </div>
-          )}
-        </div>
-        
-        {/* Nombre */}
-        <h3 className={`${currentSize.text} font-bold text-center text-gray-800 truncate w-full px-1`}>
-          {card.name}
-        </h3>
-        
-        {/* Stats para cartas pequeñas */}
-        {size === 'small' && (
-          <div className="text-xs text-gray-600 text-center">
-            Nivel {card.letterLevel}
-          </div>
-        )}
-        
-        {/* Stats detalladas para cartas grandes */}
-        {size === 'large' && (
-          <div className="grid grid-cols-2 gap-2 w-full text-xs mt-2">
-            {[
-              { label: 'Power', value: card.power, bg: 'bg-red-500', text: 'text-white', border: 'border-red-600' },
-              { label: 'Damage', value: card.damage, bg: 'bg-orange-500', text: 'text-white', border: 'border-orange-600' },
-              { label: 'Health', value: card.health, bg: 'bg-green-500', text: 'text-white', border: 'border-green-600' },
-              { label: 'Endurance', value: card.endurance, bg: 'bg-blue-500', text: 'text-white', border: 'border-blue-600' },
-              { label: 'Level', value: card.letterLevel, bg: 'bg-purple-500', text: 'text-white', border: 'border-purple-600' },
-              { label: 'Scope', value: card.scope, bg: 'bg-indigo-500', text: 'text-white', border: 'border-indigo-600' }
-            ].map(({ label, value, bg, text, border }) => (
-              <div key={label} className={`${bg} ${text} ${border} p-2 rounded-lg border-2 shadow-md`}>
-                <div className="font-bold text-xs">{label}</div>
-                <div className="font-black text-sm">{value}</div>
-              </div>
-            ))}
-          </div>
-        )}
-        
-        {/* Overlay para cartas usadas */}
-        {isUsed && (
-          <div className="absolute inset-0 bg-black bg-opacity-50 rounded-xl flex items-center justify-center">
-            <span className="text-white font-bold text-xs">USADA</span>
-          </div>
-        )}
-      </div>
-    );
   };
 
   if (!gameData) {
@@ -341,7 +294,7 @@ export const GamePage = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
           <div className="animate-bounce">
             <div className="animate-pulse bg-yellow-400 rounded-full p-4 shadow-2xl">
-              <GameCard card={launchedCard} size="large" className="animate-spin" />
+              <Cards card={launchedCard} size="large" className="animate-spin" />
             </div>
           </div>
           <div className="text-center text-white text-2xl font-bold mt-4 animate-pulse">
@@ -358,7 +311,7 @@ export const GamePage = () => {
             <div className="flex flex-wrap justify-center gap-4">
               {playedCards.map((playedCard, index) => (
                 <div key={index} className="text-center">
-                  <GameCard card={playedCard} size="medium" />
+                  <Cards card={playedCard} size="medium" />
                   <div className="text-white text-sm mt-2 font-semibold bg-black bg-opacity-50 px-2 py-1 rounded">
                     {playedCard.playerName}
                   </div>
@@ -391,7 +344,7 @@ export const GamePage = () => {
                 {selectedCard && (
                   <div className="relative mb-4">
                     <div className="relative transform rotate-12 hover:rotate-0 transition-transform duration-500 flex justify-center mb-4">
-                      <GameCard card={selectedCard} size="medium" isSelected={true} />
+                      <Cards card={selectedCard} size="medium" isSelected={true} />
                     </div>
                     
                     {showAttributeSelection && (
@@ -475,29 +428,33 @@ export const GamePage = () => {
               const arcPosition = getArcPosition(index, 8);
               
               return (
-                <div
-                  key={`${card.id}-${index}`}
-                  className={`absolute transition-all duration-300 ease-out ${
-                    !isUsed ? 'cursor-pointer' : 'cursor-not-allowed'
-                  }`}
-                  style={{
-                    transform: arcPosition.transform,
-                    zIndex: isUsed ? 1 : arcPosition.zIndex,
-                    transformOrigin: 'center bottom'
-                  }}
-                  onClick={!isUsed ? () => handleCardSelect(card, index) : undefined}
-                >
-                  <div 
-                    className={`transition-all duration-300 ease-out ${
-                      !isUsed ? 'hover:scale-125 hover:-translate-y-12 hover:z-50 hover:drop-shadow-2xl' : ''
+                  <div
+                    key={`${card.id}-${index}`}
+                    className={`absolute transition-all duration-300 ease-out ${
+                      !isUsed ? 'cursor-pointer' : 'cursor-not-allowed'
                     }`}
                     style={{
-                      zIndex: 'inherit'
+                      transform: arcPosition.transform,
+                      zIndex: isUsed ? 1 : arcPosition.zIndex,
+                      transformOrigin: 'center bottom'
                     }}
+                    onClick={!isUsed ? () => handleCardSelect(card, index) : undefined}
                   >
-                    <GameCard card={card} size="small" isUsed={isUsed} />
+                    <div 
+                      className={`transition-all duration-300 ease-out ${
+                        !isUsed ? 'hover:scale-125 hover:-translate-y-12 hover:z-50 hover:drop-shadow-2xl' : ''
+                      }`}
+                      style={{
+                        zIndex: 'inherit'
+                      }}
+                    >
+                      <Cards 
+                        card={card} 
+                        size="small" 
+                        isUsed={isUsed}
+                      />
+                    </div>
                   </div>
-                </div>
               );
             })}
           </div>
