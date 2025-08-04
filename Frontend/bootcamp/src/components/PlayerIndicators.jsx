@@ -4,20 +4,45 @@ import Torre from '../assets/torre.png'
 // Posiciones de jugadores
 const getPlayerPosition = (index, total) => {
   const positions = {
+    
     2: [
       { top: '10%', left: '50%', transform: 'translateX(-50%)' },
-      { bottom: '10%', left: '50%', transform: 'translateX(-50%)' }
+      { bottom: '0%', left: '50%', transform: 'translateX(-50%)' }
     ],
     3: [
-      { top: '10%', left: '50%', transform: 'translateX(-50%)' },
-      { bottom: '20%', left: '20%' },
-      { bottom: '20%', right: '20%' }
+      { top: '75%', left: '50%', transform: 'translateX(-50%)' },
+      { bottom: '45%', left: '20%' },
+      { bottom: '45%', right: '20%' }
     ],
     4: [
       { top: '10%', left: '50%', transform: 'translateX(-50%)' },
-      { left: '10%', top: '50%', transform: 'translateY(-50%)' },
-      { right: '10%', top: '50%', transform: 'translateY(-50%)' },
-      { bottom: '10%', left: '50%', transform: 'translateX(-50%)' }
+      { bottom: '40%', left: '20%' },
+      { bottom: '40%', right: '20%' },
+      { bottom: '0%', right: '47%' }
+    ],
+        5: [
+      { top: '10%', left: '50%', transform: 'translateX(-50%)' },
+      { bottom: '40%', left: '20%' },
+      { bottom: '40%', right: '20%' },
+      { bottom: '0%', right: '20%' },
+      { bottom: '0%', right: '72%' }
+    ],
+        6: [
+      { top: '10%', left: '50%', transform: 'translateX(-50%)' },
+      { bottom: '40%', left: '20%' },
+      { bottom: '40%', right: '20%' },
+      { bottom: '0%', right: '20%' },
+      { bottom: '0%', right: '72%' },
+      { bottom: '0%', right: '46%' }
+    ],
+    7: [
+      { top: '10%', left: '50%', transform: 'translateX(-50%)' },
+      { bottom: '56%', left: '7%' },
+      { bottom: '56%', right: '7%' },
+      { bottom: '15%', right: '7%' },
+      { bottom: '15%', left: '7%' },
+      { bottom: '0%', right: '63%' },
+      { bottom: '0%', right: '26%' }
     ]
   };
   return positions[total]?.[index] || { top: '50%', left: '50%' };
