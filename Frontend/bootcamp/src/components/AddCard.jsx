@@ -54,8 +54,8 @@ const AddCard = ({ onClose }) => {
     }
 
     try {
-      const res = await fetch('http://localhost:5084/api/Cards', {
-      // const res = await fetch('https://localhost:7221/api/Cards', {
+      //const res = await fetch('http://localhost:5084/api/Cards', {
+       const res = await fetch('https://localhost:7221/api/Cards', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, id: 0 }),
