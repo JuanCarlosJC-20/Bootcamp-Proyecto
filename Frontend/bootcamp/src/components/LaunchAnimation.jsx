@@ -31,7 +31,7 @@ const LaunchAnimation = ({ launchedCard }) => {
             opacity: 1;
           }
           100% {
-            transform: translateY(0px) translateX(0px) rotate(75deg) scale(0.6);
+            transform: translateY(0px) translateX(0px) rotate(15deg) scale(0.6);
             opacity: 1;
           }
         }
