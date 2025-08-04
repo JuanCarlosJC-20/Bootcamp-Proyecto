@@ -3,7 +3,7 @@ import Cards from './Cards';
 
 const LaunchAnimation = ({ launchedCard }) => {
   return (
-    <div className="card-container">
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
       <style>{`
         @keyframes cardThrow {
           0% {
@@ -11,20 +11,16 @@ const LaunchAnimation = ({ launchedCard }) => {
             opacity: 0;
           }
           30% {
-            transform: translateY(-50px) translateX(-20px) rotate(45deg) scale(1.2);
+            transform: translateY(-50px) translateX(-20px) rotate(45deg) scale(1.1);
             opacity: 1;
           }
           60% {
-            transform: translateY(-20px) translateX(10px) rotate(65deg) scale(1.1);
-            opacity: 1;
-          }
-          85% {
-            transform: translateY(-5px) translateX(2px) rotate(72deg) scale(1.05);
+            transform: translateY(-20px) translateX(10px) rotate(65deg) scale(1.05);
             opacity: 1;
           }
           100% {
-            transform: translateY(0px) translateX(0px) rotate(75deg) scale(0.9);
-            opacity: 0.9;
+            transform: translateY(0px) translateX(0px) rotate(75deg) scale(0.6);
+            opacity: 1;
           }
         }
         
@@ -50,7 +46,6 @@ const LaunchAnimation = ({ launchedCard }) => {
         
         .card-throw {
           animation: cardThrow 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-          transform: translateY(0px) translateX(0px) rotate(75deg) scale(1);
         }
         
         .glow-effect {
@@ -60,14 +55,6 @@ const LaunchAnimation = ({ launchedCard }) => {
           backdrop-filter: blur(8px);
         }
         
-        .card-container {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 50;
-        }
-        
         .text-glow {
           animation: textGlow 1.5s ease-in-out infinite;
         }
@@ -75,7 +62,7 @@ const LaunchAnimation = ({ launchedCard }) => {
       
       <div className="card-throw">
         <div className="glow-effect p-2">
-          <Cards card={launchedCard} size="medium" />
+          <Cards card={launchedCard} size="small" />
         </div>
       </div>
       

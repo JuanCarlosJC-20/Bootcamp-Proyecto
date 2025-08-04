@@ -37,7 +37,7 @@ const CardStack = ({ playedCards, showCardDetail = false, showLaunchAnimation = 
         
         .card-stack-glow {
           border-radius: 12px;
-          padding: 1px;
+          padding: -66%;
         }
       `}</style>
       
