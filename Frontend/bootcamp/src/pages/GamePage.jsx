@@ -14,11 +14,11 @@ export const GamePage = () => {
   const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
   const [selectedCard, setSelectedCard] = useState(null);
   const [showCardDetail, setShowCardDetail] = useState(false);
-  const [showAttributeSelection, setShowAttributeSelection] = useState(false);
   const [playedCards, setPlayedCards] = useState([]);
   const [gamePhase, setGamePhase] = useState('selection');
   const [launchedCard, setLaunchedCard] = useState(null);
   const [showLaunchAnimation, setShowLaunchAnimation] = useState(false);
+  const [showExitModal, setShowExitModal] = useState(false);
 
   // Datos de navegación
   useEffect(() => {
@@ -163,15 +163,27 @@ export const GamePage = () => {
   const handleCardSelect = (card, cardIndex) => {
     setSelectedCard({ ...card, originalIndex: cardIndex });
     setShowCardDetail(true);
-    setShowAttributeSelection(true);
     setGamePhase('attribute');
   };
 
   const handleCloseCardDetail = () => {
     setShowCardDetail(false);
     setSelectedCard(null);
-    setShowAttributeSelection(false);
     setGamePhase('selection');
+  };
+
+  // Funciones para el modal de salida
+  const handleShowExitModal = () => {
+    setShowExitModal(true);
+  };
+
+  const handleCancelExit = () => {
+    setShowExitModal(false);
+  };
+
+  const handleConfirmExit = () => {
+    setShowExitModal(false);
+    navigate('/home');
   };
 
   const handleConfirmCard = async () => {
@@ -265,7 +277,7 @@ export const GamePage = () => {
           <div className="flex justify-between items-center px-3 py-1">
             {/* Botón Home minimalista */}
             <button
-              onClick={() => navigate('/home')}
+              onClick={handleShowExitModal}
               className="bg-gray-700 hover:bg-gray-800 text-white p-1 rounded text-lg"
             >
               🏠
@@ -344,68 +356,35 @@ export const GamePage = () => {
                 {selectedCard && (
                   <div className="relative mb-4">
                     <div className="relative transform rotate-12 hover:rotate-0 transition-transform duration-500 flex justify-center mb-4">
-                      <Cards card={selectedCard} size="medium" isSelected={true} />
+                      <Cards 
+                        card={selectedCard} 
+                        size="large" 
+                        isSelected={true}
+                        onAttributeClick={(attribute) => setSelectedAttribute(attribute)}
+                        selectedAttribute={selectedAttribute}
+                      />
                     </div>
                     
-                    {showAttributeSelection && (
-                      <div className="bg-gradient-to-br from-white via-gray-50 to-white rounded-xl p-4 shadow-2xl border-2 border-amber-400 max-w-sm mx-auto backdrop-blur-sm">
-                        <h4 className="text-gray-800 font-bold text-lg mb-3 text-center flex items-center justify-center gap-2">
-                          🎯 <span>Selecciona el Atributo:</span>
-                        </h4>
-                        <div className="grid grid-cols-3 gap-2">
-                          {[
-                            { attr: 'PODER', label: 'Power', value: selectedCard.power, emoji: '💪' },
-                            { attr: 'ATAQUE', label: 'Damage', value: selectedCard.damage, emoji: '⚔️' },
-                            { attr: 'SALUD', label: 'Health', value: selectedCard.health, emoji: '❤️' },
-                            { attr: 'RESISTENCIA', label: 'Endurance', value: selectedCard.endurance, emoji: '🛡️' },
-                            { attr: 'NIVEL', label: 'Level', value: selectedCard.letterLevel, emoji: '⭐' },
-                            { attr: 'ALCANCE', label: 'Scope', value: selectedCard.scope, emoji: '🎯' }
-                          ].map(({ attr, label, value, emoji }, index) => {
-                            const isSelected = selectedAttribute === attr;
-                            const colors = [
-                              { bg: 'bg-red-500', bgHover: 'bg-red-600', bgLight: 'bg-red-100', text: 'text-red-700', border: 'border-red-300' },
-                              { bg: 'bg-orange-500', bgHover: 'bg-orange-600', bgLight: 'bg-orange-100', text: 'text-orange-700', border: 'border-orange-300' },
-                              { bg: 'bg-green-500', bgHover: 'bg-green-600', bgLight: 'bg-green-100', text: 'text-green-700', border: 'border-green-300' },
-                              { bg: 'bg-blue-500', bgHover: 'bg-blue-600', bgLight: 'bg-blue-100', text: 'text-blue-700', border: 'border-blue-300' },
-                              { bg: 'bg-purple-500', bgHover: 'bg-purple-600', bgLight: 'bg-purple-100', text: 'text-purple-700', border: 'border-purple-300' },
-                              { bg: 'bg-indigo-500', bgHover: 'bg-indigo-600', bgLight: 'bg-indigo-100', text: 'text-indigo-700', border: 'border-indigo-300' }
-                            ];
-                            const colorScheme = colors[index];
-                            
-                            return (
-                              <button
-                                key={attr}
-                                onClick={() => setSelectedAttribute(attr)}
-                                className={`p-2 rounded-lg text-xs font-bold transition-all duration-300 shadow-lg border-2 transform hover:scale-105 ${
-                                  isSelected 
-                                    ? `${colorScheme.bg} text-white border-white shadow-2xl scale-105 ring-2 ring-yellow-400` 
-                                    : `${colorScheme.bgLight} ${colorScheme.text} ${colorScheme.border} hover:${colorScheme.bgHover} hover:text-white hover:shadow-xl`
-                                }`}
-                              >
-                                <div className="text-sm mb-1">{emoji}</div>
-                                <div className="font-bold text-xs">{label}</div>
-                                <div className="text-sm font-black mt-1">{value}</div>
-                              </button>
-                            );
-                          })}
-                        </div>
-                        
-                        <div className="flex justify-center gap-3 mt-4">
-                          <button
-                            onClick={handleConfirmCard}
-                            className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-2 rounded-lg font-bold transition-all duration-300 border-2 border-green-700 shadow-lg hover:shadow-2xl transform hover:scale-110 active:scale-95 flex items-center gap-2 text-sm"
-                          >
-                            🚀 <span>Lanzar</span>
-                          </button>
-                          <button
-                            onClick={handleCloseCardDetail}
-                            className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-2 rounded-lg font-bold transition-all duration-300 border-2 border-red-700 shadow-lg hover:shadow-2xl transform hover:scale-110 active:scale-95 flex items-center gap-2 text-sm"
-                          >
-                            ❌ <span>Cancelar</span>
-                          </button>
-                        </div>
+                    <div className="text-center">
+                      <div className="text-lg mb-4 bg-purple-600 bg-opacity-80 px-3 py-2 rounded-lg shadow-lg text-white inline-block">
+                        Atributo seleccionado: <span className="font-bold text-yellow-300">{selectedAttribute}</span>
                       </div>
-                    )}
+                      
+                      <div className="flex justify-center gap-3 mt-4">
+                        <button
+                          onClick={handleConfirmCard}
+                          className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-2 rounded-lg font-bold transition-all duration-300 border-2 border-green-700 shadow-lg hover:shadow-2xl transform hover:scale-110 active:scale-95 flex items-center gap-2 text-sm"
+                        >
+                          🚀 <span>Lanzar</span>
+                        </button>
+                        <button
+                          onClick={handleCloseCardDetail}
+                          className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-2 rounded-lg font-bold transition-all duration-300 border-2 border-red-700 shadow-lg hover:shadow-2xl transform hover:scale-110 active:scale-95 flex items-center gap-2 text-sm"
+                        >
+                          ❌ <span>Cancelar</span>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
@@ -513,6 +492,38 @@ export const GamePage = () => {
           </div>
         );
       })}
+
+      {/* Modal de confirmación de salida */}
+      {showExitModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-gradient-to-br from-[#060E42] to-[#475BDF] rounded-2xl p-8 max-w-md mx-4 shadow-2xl">
+            <div className="text-center">
+              <h2 className="text-2xl font-bold text-white mb-4">
+                ¿Salir de la Partida?
+              </h2>
+              <p className="text-gray-200 mb-6 text-lg">
+                Si sales ahora, perderás todo el progreso de esta partida. 
+                ¿Estás seguro de que quieres continuar?
+              </p>
+              
+              <div className="flex gap-4 justify-center">
+                <button
+                  onClick={handleCancelExit}
+                  className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-8 py-3 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 active:scale-95 flex items-center gap-2"
+                >
+                <span>Cancelar</span>
+                </button>
+                <button
+                  onClick={handleConfirmExit}
+                  className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-3 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 active:scale-95 flex items-center gap-2"
+                >
+                 <span>Salir</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
