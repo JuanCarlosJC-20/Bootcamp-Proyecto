@@ -229,16 +229,6 @@ const Cards = ({
           </div>
           <div 
             className={`p-1 rounded-lg transition-colors ${
-              onAttributeClick ? 'cursor-pointer hover:bg-purple-200' : 'hover:bg-purple-200'
-            } ${selectedAttribute === 'NIVEL' ? 'bg-purple-500 text-white ring-2 ring-yellow-400' : ''}`}
-            onClick={onAttributeClick ? () => onAttributeClick('NIVEL') : undefined}
-          >
-            <div className={`font-bold transition-colors ${
-              selectedAttribute === 'NIVEL' ? 'text-white' : 'text-black hover:text-purple-700'
-            }`}>Level {card.letterLevel}</div>
-          </div>
-          <div 
-            className={`p-1 rounded-lg transition-colors ${
               onAttributeClick ? 'cursor-pointer hover:bg-yellow-200' : 'hover:bg-yellow-200'
             } ${selectedAttribute === 'ALCANCE' ? 'bg-yellow-500 text-white ring-2 ring-yellow-400' : ''}`}
             onClick={onAttributeClick ? () => onAttributeClick('ALCANCE') : undefined}

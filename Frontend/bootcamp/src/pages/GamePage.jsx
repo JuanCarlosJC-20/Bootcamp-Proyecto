@@ -8,7 +8,7 @@ export const GamePage = () => {
   const [gameData, setGameData] = useState(null);
   const [currentRound] = useState(1);
   const [timeLeft, setTimeLeft] = useState(0);
-  const [selectedAttribute, setSelectedAttribute] = useState('ATAQUE');
+  const [selectedAttribute, setSelectedAttribute] = useState('PODER');
   const [playerCards, setPlayerCards] = useState({});
   const [usedCards, setUsedCards] = useState({});
   const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
@@ -252,7 +252,7 @@ export const GamePage = () => {
   const getAttributeValue = (card, attribute) => {
     const mapping = {
       'ATAQUE': card.damage, 'SALUD': card.health, 'PODER': card.power,
-      'RESISTENCIA': card.endurance, 'NIVEL': card.letterLevel, 'ALCANCE': card.scope
+      'RESISTENCIA': card.endurance, 'ALCANCE': card.scope
     };
     return mapping[attribute] || 0;
   };
