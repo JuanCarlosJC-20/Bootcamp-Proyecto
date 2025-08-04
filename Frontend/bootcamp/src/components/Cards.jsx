@@ -239,18 +239,8 @@ const Cards = ({
           </div>
         </div>
       ) : size === 'medium' ? (
-        <div className="grid grid-cols-2 gap-1 w-full text-xs mt-2">
-          {[
-            { label: 'Pow', value: card.power, bg: 'bg-red-500' },
-            { label: 'Dmg', value: card.damage, bg: 'bg-orange-500' },
-            { label: 'HP', value: card.health, bg: 'bg-green-500' },
-            { label: 'End', value: card.endurance, bg: 'bg-blue-500' }
-          ].map(({ label, value, bg }) => (
-            <div key={label} className={`${bg} text-white p-1 rounded text-center`}>
-              <div className="font-bold text-xs">{label}</div>
-              <div className="font-black text-xs">{value}</div>
-            </div>
-          ))}
+        <div className="text-xs text-gray-600 text-center mt-1">
+          Nivel {card.letterLevel}
         </div>
       ) : (
         <div className="text-xs text-gray-600 text-center">

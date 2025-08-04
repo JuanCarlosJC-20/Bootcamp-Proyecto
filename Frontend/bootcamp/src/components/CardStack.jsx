@@ -18,8 +18,8 @@ const CardStack = ({ playedCards, showCardDetail = false, showLaunchAnimation = 
     <div 
       className="fixed left-1/2 transform -translate-x-1/2"
       style={{ 
-        top: '25%', 
-        right: '630px',
+        top: '5%', 
+        right: '530px',
         transform: 'translate(-50%, -50%)',
         zIndex: getZIndex()
       }}
@@ -55,8 +55,8 @@ const CardStack = ({ playedCards, showCardDetail = false, showLaunchAnimation = 
             <div className="card-stack-glow">
               <Cards 
                 card={playedCard} 
-                size="small"
-                className="transform scale-90"
+                size="large"
+                className="transform scale-50"
               />
             </div>
 
