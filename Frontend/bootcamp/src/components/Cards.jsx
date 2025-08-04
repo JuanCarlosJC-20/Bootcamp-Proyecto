@@ -6,7 +6,9 @@ const Cards = ({
   isSelected = false, 
   isUsed = false, 
   onClick = null, 
-  className = '' 
+  className = '',
+  onAttributeClick = null, // Nueva función para manejar clicks en atributos
+  selectedAttribute = null // Atributo actualmente seleccionado
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
@@ -185,20 +187,65 @@ const Cards = ({
       {/* Estadísticas */}
       {size === 'large' ? (
         <div className="grid grid-cols-1 gap-1 w-full text-sm text-center mt-2 border-4 border-[#932828] rounded-2xl bg-[#D7C39F]">
-          <div className="rounded-lg hover:bg-red-200 transition-colors p-1">
-            <div className="font-bold text-black hover:text-red-700 transition-colors">Power {card.power}</div>
+          <div 
+            className={`rounded-lg transition-colors p-1 ${
+              onAttributeClick ? 'cursor-pointer hover:bg-red-200' : 'hover:bg-red-200'
+            } ${selectedAttribute === 'PODER' ? 'bg-red-500 text-white ring-2 ring-yellow-400' : ''}`}
+            onClick={onAttributeClick ? () => onAttributeClick('PODER') : undefined}
+          >
+            <div className={`font-bold transition-colors ${
+              selectedAttribute === 'PODER' ? 'text-white' : 'text-black hover:text-red-700'
+            }`}>Power {card.power}</div>
           </div>
-          <div className="p-1 rounded-lg hover:bg-orange-200 transition-colors">
-            <div className="font-bold text-black hover:text-orange-700 transition-colors">Damage {card.damage}</div>
+          <div 
+            className={`p-1 rounded-lg transition-colors ${
+              onAttributeClick ? 'cursor-pointer hover:bg-orange-200' : 'hover:bg-orange-200'
+            } ${selectedAttribute === 'ATAQUE' ? 'bg-orange-500 text-white ring-2 ring-yellow-400' : ''}`}
+            onClick={onAttributeClick ? () => onAttributeClick('ATAQUE') : undefined}
+          >
+            <div className={`font-bold transition-colors ${
+              selectedAttribute === 'ATAQUE' ? 'text-white' : 'text-black hover:text-orange-700'
+            }`}>Damage {card.damage}</div>
           </div>
-          <div className="p-1 rounded-lg hover:bg-green-200 transition-colors">
-            <div className="font-bold text-black hover:text-green-700 transition-colors">Health {card.health}</div>
+          <div 
+            className={`p-1 rounded-lg transition-colors ${
+              onAttributeClick ? 'cursor-pointer hover:bg-green-200' : 'hover:bg-green-200'
+            } ${selectedAttribute === 'SALUD' ? 'bg-green-500 text-white ring-2 ring-yellow-400' : ''}`}
+            onClick={onAttributeClick ? () => onAttributeClick('SALUD') : undefined}
+          >
+            <div className={`font-bold transition-colors ${
+              selectedAttribute === 'SALUD' ? 'text-white' : 'text-black hover:text-green-700'
+            }`}>Health {card.health}</div>
           </div>
-          <div className="p-1 rounded-lg hover:bg-blue-200 transition-colors">
-            <div className="font-bold text-black hover:text-blue-700 transition-colors">Endurance {card.endurance}</div>
+          <div 
+            className={`p-1 rounded-lg transition-colors ${
+              onAttributeClick ? 'cursor-pointer hover:bg-blue-200' : 'hover:bg-blue-200'
+            } ${selectedAttribute === 'RESISTENCIA' ? 'bg-blue-500 text-white ring-2 ring-yellow-400' : ''}`}
+            onClick={onAttributeClick ? () => onAttributeClick('RESISTENCIA') : undefined}
+          >
+            <div className={`font-bold transition-colors ${
+              selectedAttribute === 'RESISTENCIA' ? 'text-white' : 'text-black hover:text-blue-700'
+            }`}>Endurance {card.endurance}</div>
           </div>
-          <div className="p-1 rounded-lg hover:bg-yellow-200 transition-colors">
-            <div className="font-bold text-black hover:text-yellow-700 transition-colors">Scope {card.scope}</div>
+          <div 
+            className={`p-1 rounded-lg transition-colors ${
+              onAttributeClick ? 'cursor-pointer hover:bg-purple-200' : 'hover:bg-purple-200'
+            } ${selectedAttribute === 'NIVEL' ? 'bg-purple-500 text-white ring-2 ring-yellow-400' : ''}`}
+            onClick={onAttributeClick ? () => onAttributeClick('NIVEL') : undefined}
+          >
+            <div className={`font-bold transition-colors ${
+              selectedAttribute === 'NIVEL' ? 'text-white' : 'text-black hover:text-purple-700'
+            }`}>Level {card.letterLevel}</div>
+          </div>
+          <div 
+            className={`p-1 rounded-lg transition-colors ${
+              onAttributeClick ? 'cursor-pointer hover:bg-yellow-200' : 'hover:bg-yellow-200'
+            } ${selectedAttribute === 'ALCANCE' ? 'bg-yellow-500 text-white ring-2 ring-yellow-400' : ''}`}
+            onClick={onAttributeClick ? () => onAttributeClick('ALCANCE') : undefined}
+          >
+            <div className={`font-bold transition-colors ${
+              selectedAttribute === 'ALCANCE' ? 'text-white' : 'text-black hover:text-yellow-700'
+            }`}>Scope {card.scope}</div>
           </div>
         </div>
       ) : size === 'medium' ? (
