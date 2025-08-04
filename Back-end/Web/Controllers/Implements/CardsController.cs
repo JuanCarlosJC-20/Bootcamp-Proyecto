@@ -41,7 +41,7 @@ namespace Web.Controllers.Implements
             catch (DuplicateCardException ex)
             {
                 _logger.LogWarning("Error de duplicación al crear tarjeta: " + string.Join(", ", ex.Errores));
-                return Conflict(new { mensaje = "Ya existen campos duplicados.", errores = ex.Errores });
+                return Conflict(new { mensaje = "Ya hay campos con esos datos existentes .", errores = ex.Errores });
             }
             catch (ArgumentException ex)
             {
