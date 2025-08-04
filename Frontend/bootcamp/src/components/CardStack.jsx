@@ -37,7 +37,7 @@ const CardStack = ({ playedCards, showCardDetail = false, showLaunchAnimation = 
         
         .card-stack-glow {
           border-radius: 12px;
-          padding: -66%;
+          padding: 6%;
         }
       `}</style>
       
@@ -58,19 +58,7 @@ const CardStack = ({ playedCards, showCardDetail = false, showLaunchAnimation = 
                 className="transform scale-90"
               />
             </div>
-            
-            {/* Indicador del jugador - solo en la carta superior */}
-            {index === playedCards.length - 1 && (
-              <div 
-                className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-white text-xs font-bold bg-black bg-opacity-80 px-2 py-1 rounded-full shadow-lg"
-                style={{ 
-                  transform: `translate(-50%, 0) rotate(${-(70 + (index * 3))}deg)`,
-                  zIndex: getZIndex() + index + 1
-                }}
-              >
-                {playedCard.playerName}
-              </div>
-            )}
+
           </div>
         ))}
       </div>
