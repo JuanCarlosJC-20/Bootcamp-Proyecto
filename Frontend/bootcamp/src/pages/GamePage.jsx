@@ -8,6 +8,7 @@ import CardArc from '../components/CardArc';
 import PlayerIndicators from '../components/PlayerIndicators';
 import ExitModal from '../components/ExitModal';
 import CardStack from '../components/CardStack';
+import music from '../assets/battle.mp3';
 
 export const GamePage = () => {
   const {
@@ -50,6 +51,8 @@ export const GamePage = () => {
 
   return (
     <div className="h-screen bg-gradient-to-b from-[#060E42] to-[#475BDF] relative overflow-hidden">
+      {/* Audio de fondo */}
+      <audio src={music} autoPlay loop />
       
       {/* Header del juego */}
       <GameHeader 
