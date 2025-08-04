@@ -7,6 +7,7 @@ import CardSelection from '../components/CardSelection';
 import CardArc from '../components/CardArc';
 import PlayerIndicators from '../components/PlayerIndicators';
 import ExitModal from '../components/ExitModal';
+import CardStack from '../components/CardStack';
 
 export const GamePage = () => {
   const {
@@ -65,7 +66,16 @@ export const GamePage = () => {
         <LaunchAnimation launchedCard={launchedCard} />
       )}
 
-      {/* Mesa con cartas jugadas */}
+      {/* Mazo de cartas jugadas en el centro */}
+      {playedCards.length > 0 && !showLaunchAnimation && (
+        <CardStack 
+          playedCards={playedCards} 
+          showCardDetail={showCardDetail}
+          showLaunchAnimation={showLaunchAnimation}
+        />
+      )}
+
+      {/* Mesa con cartas jugadas (solo para resultados finales) */}
       {gamePhase === 'results' && playedCards.length > 0 && !showLaunchAnimation && (
         <GameResults playedCards={playedCards} />
       )}
