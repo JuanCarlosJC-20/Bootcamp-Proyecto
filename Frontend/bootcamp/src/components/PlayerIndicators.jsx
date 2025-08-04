@@ -6,8 +6,8 @@ const getPlayerPosition = (index, total) => {
   const positions = {
     
     2: [
-      { top: '10%', left: '50%', transform: 'translateX(-50%)' },
-      { bottom: '0%', left: '50%', transform: 'translateX(-50%)' }
+      { bottom: '30%', right: '75%' },
+      { bottom: '30%', left: '75%' },
     ],
     3: [
       { top: '75%', left: '50%', transform: 'translateX(-50%)' },
@@ -15,34 +15,34 @@ const getPlayerPosition = (index, total) => {
       { bottom: '45%', right: '20%' }
     ],
     4: [
-      { top: '10%', left: '50%', transform: 'translateX(-50%)' },
-      { bottom: '40%', left: '20%' },
-      { bottom: '40%', right: '20%' },
-      { bottom: '0%', right: '47%' }
+      { bottom: '20%', right: '75%' },
+      { bottom: '63%', right: '75%' },
+      { bottom: '63%', left: '75%' },
+      { bottom: '20%', left: '75%' },
     ],
         5: [
-      { top: '10%', left: '50%', transform: 'translateX(-50%)' },
-      { bottom: '40%', left: '20%' },
-      { bottom: '40%', right: '20%' },
-      { bottom: '0%', right: '20%' },
-      { bottom: '0%', right: '72%' }
+      { bottom: '0%', left: '46%'},
+      { bottom: '20%', right: '75%' },
+      { bottom: '63%', right: '75%' },
+      { bottom: '63%', left: '75%' },
+      { bottom: '20%', left: '75%' },
     ],
         6: [
-      { top: '10%', left: '50%', transform: 'translateX(-50%)' },
-      { bottom: '40%', left: '20%' },
-      { bottom: '40%', right: '20%' },
-      { bottom: '0%', right: '20%' },
-      { bottom: '0%', right: '72%' },
-      { bottom: '0%', right: '46%' }
+      { bottom: '0%', left: '70%'},
+      { bottom: '0%', right: '70%' },
+      { bottom: '27%', left: '7%' },
+      { bottom: '63%', left: '25%' },
+      { bottom: '63%', right: '22%' },
+      { bottom: '27%', right: '7%' },
     ],
     7: [
-      { top: '10%', left: '50%', transform: 'translateX(-50%)' },
-      { bottom: '56%', left: '7%' },
-      { bottom: '56%', right: '7%' },
-      { bottom: '15%', right: '7%' },
-      { bottom: '15%', left: '7%' },
-      { bottom: '0%', right: '63%' },
-      { bottom: '0%', right: '26%' }
+      { top: '76%', left: '50%', transform: 'translateX(-50%)' },
+      { bottom: '0%', left: '25%' },
+      { bottom: '27%', left: '7%' },
+      { bottom: '63%', left: '25%' },
+      { bottom: '63%', right: '22%' },
+      { bottom: '27%', right: '7%' },
+      { bottom: '0%', right: '22%' }
     ]
   };
   return positions[total]?.[index] || { top: '50%', left: '50%' };
