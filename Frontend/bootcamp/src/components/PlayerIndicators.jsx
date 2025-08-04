@@ -1,4 +1,5 @@
 import React from 'react';
+import Torre from '../assets/torre.png'
 
 // Posiciones de jugadores
 const getPlayerPosition = (index, total) => {
@@ -42,9 +43,9 @@ const PlayerIndicators = ({ players, currentPlayerIndex, playedCards }) => {
                   ? 'border-green-400 bg-gradient-to-br from-green-100 to-green-200 shadow-lg'
                   : 'border-white bg-gradient-to-br from-gray-100 to-gray-200 shadow-lg'
               } p-1 mb-1`}>
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-700 flex items-center justify-center shadow-inner">
+                <div className="w-25 h-25 rounded-full bg-gradient-to-br from-blue-500 to-purple-700 flex items-center justify-center shadow-inner">
                   <span className="text-white font-bold text-sm drop-shadow-lg">
-                    {player.namePlayer.charAt(0).toUpperCase()}
+                    <img src={Torre}  alt="" />
                   </span>
                 </div>
               </div>
