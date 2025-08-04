@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import flecha from '../assets/flecha.svg'
 
@@ -7,37 +7,19 @@ export const Room = () => {
   const [roomName, setRoomName] = useState('');
   const [maxPlayers, setMaxPlayers] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [mensaje, setMensaje] = useState('');
+  const [tipoMensaje, setTipoMensaje] = useState(''); // 'success' o 'error'
 
-  // Nombres de meses en español
-  const monthNames = [
-    'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
-    'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
-  ];
-
-  // Función para generar nombres aleatorios con formato mes + año
-  const generateRandomNames = (count) => {
-    const names = [];
-    const usedCombinations = new Set();
-    
-    while (names.length < count) {
-      // Seleccionar mes aleatorio
-      const randomMonth = monthNames[Math.floor(Math.random() * monthNames.length)];
-      
-      // Generar año aleatorio entre 2000 y 3000
-      const randomYear = Math.floor(Math.random() * 1001) + 2000;
-      
-      // Crear la combinación
-      const combination = `${randomMonth}${randomYear}`;
-      
-      // Verificar que no se repita
-      if (!usedCombinations.has(combination)) {
-        usedCombinations.add(combination);
-        names.push(combination);
-      }
+  // Limpiar mensaje después de 5 segundos (excepto si es de éxito, que navega automáticamente)
+  useEffect(() => {
+    if (mensaje && tipoMensaje === 'error') {
+      const timer = setTimeout(() => {
+        setMensaje('');
+        setTipoMensaje('');
+      }, 5000);
+      return () => clearTimeout(timer);
     }
-    
-    return names;
-  };
+  }, [mensaje, tipoMensaje]);
 
   const handleRoomNameChange = (e) => {
     setRoomName(e.target.value);
@@ -49,27 +31,32 @@ export const Room = () => {
 
   const handleCreateRoom = async () => {
     if (roomName.trim() === '') {
-      alert('Por favor ingresa un nombre para la sala');
+      setMensaje('Por favor ingresa un nombre para la sala');
+      setTipoMensaje('error');
       return;
     }
     
     if (maxPlayers === '') {
-      alert('Por favor selecciona el número máximo de jugadores');
+      setMensaje('Por favor selecciona el número máximo de jugadores');
+      setTipoMensaje('error');
       return;
     }
     
     setIsLoading(true);
+    setMensaje(''); // Limpiar mensajes anteriores
     
     try {
-      // 1. Crear la sala
       const roomData = {
-        RoomName: roomName.trim(),
-        NumPlayers: parseInt(maxPlayers)
+        roomName: roomName.trim(),
+        numPlayers: parseInt(maxPlayers)
       };
 
-      console.log('Creando sala:', roomData);
+      console.log('Creando sala completa:', roomData);
 
-      const roomResponse = await fetch('http://localhost:5084/api/Room', {
+      // UNA SOLA LLAMADA que crea todo: Room + Game + Players
+      //const response = await fetch('https://localhost:5084/api/Room/create-complete-room', {
+      const response = await fetch('https://localhost:7221/api/Room/create-complete-room', {
+
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -77,85 +64,32 @@ export const Room = () => {
         body: JSON.stringify(roomData)
       });
 
-      if (!roomResponse.ok) {
-        const errorText = await roomResponse.text();
-        throw new Error(`Error al crear sala: ${roomResponse.status} - ${roomResponse.statusText}. ${errorText}`);
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Error al crear sala: ${response.status} - ${response.statusText}. ${errorText}`);
       }
 
-      const createdRoom = await roomResponse.json();
-      console.log('Sala creada:', createdRoom);
-
-      // 2. Crear el juego asociado a la sala
-      const gameData = {
-        GameTime: new Date().toISOString(),
-        IdPlayerWinner: 0,
-        IdRoom: createdRoom.id
-      };
-
-      console.log('Creando juego:', gameData);
-
-      const gameResponse = await fetch('http://localhost:5084/api/Game', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(gameData)
-      });
-
-      if (!gameResponse.ok) {
-        const errorText = await gameResponse.text();
-        throw new Error(`Error al crear juego: ${gameResponse.status} - ${gameResponse.statusText}. ${errorText}`);
-      }
-
-      const createdGame = await gameResponse.json();
-      console.log('Juego creado:', createdGame);
-
-      // 3. Crear los jugadores con nombres aleatorios (mes + año)
-      const playerNames = generateRandomNames(parseInt(maxPlayers));
-      const players = [];
-
-      for (let i = 0; i < playerNames.length; i++) {
-        const playerData = {
-          NamePlayer: playerNames[i],
-          IdGame: createdGame.id
-        };
-
-        console.log(`Creando jugador ${i + 1}:`, playerData);
-
-        const playerResponse = await fetch('http://localhost:5084/api/Player', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(playerData)
+      const result = await response.json();
+      console.log('Sala completa creada:', result);
+      
+      setMensaje(`Sala "${roomName}" creada exitosamente con ${maxPlayers} jugadores`);
+      setTipoMensaje('success');
+      
+      // Navegar después de 2 segundos para que el usuario vea el mensaje
+      setTimeout(() => {
+        navigate('/game', { 
+          state: { 
+            room: result.room,
+            game: result.game,
+            players: result.players
+          } 
         });
-
-        if (!playerResponse.ok) {
-          const errorText = await playerResponse.text();
-          throw new Error(`Error al crear jugador ${i + 1}: ${playerResponse.status} - ${errorText}`);
-        }
-
-        const createdPlayer = await playerResponse.json();
-        players.push(createdPlayer);
-        console.log(`Jugador ${i + 1} creado:`, createdPlayer);
-      }
-
-      console.log('Todos los jugadores creados:', players);
-      
-      alert(`Sala "${roomName}" creada exitosamente con ${maxPlayers} jugadores`);
-      
-      // 4. Navegar a la página del juego con todos los datos
-      navigate('/game', { 
-        state: { 
-          room: createdRoom,
-          game: createdGame,
-          players: players
-        } 
-      });
+      }, 2000);
       
     } catch (error) {
-      console.error('Error en el proceso de creación:', error);
-      alert(`Error: ${error.message}`);
+      console.error('Error al crear la sala:', error);
+      setMensaje(`Error: ${error.message}`);
+      setTipoMensaje('error');
     } finally {
       setIsLoading(false);
     }
@@ -181,6 +115,17 @@ export const Room = () => {
           <h1 className='text-white text-5xl font-bold mb-16'>
             Registra tu partida
           </h1>
+
+          {/* Mensaje de estado */}
+          {mensaje && (
+            <div className={`mb-6 p-4 rounded-2xl text-center font-semibold text-lg transition-all duration-300 ${
+              tipoMensaje === 'success' 
+                ? 'bg-green-500/20 border-2 border-green-400 text-green-100' 
+                : 'bg-red-500/20 border-2 border-red-400 text-red-100'
+            }`}>
+              {mensaje}
+            </div>
+          )}
 
           {/* Campo nombre de la sala */}
           <div className='mb-12'>

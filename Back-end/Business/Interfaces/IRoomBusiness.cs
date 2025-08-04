@@ -11,5 +11,6 @@ namespace Business.Interfaces
 {
     public interface IRoomBusiness : IBaseBusiness<Room , RoomDto>
     {
+        Task<CompleteRoomResponseDto> CreateCompleteRoomAsync(CreateCompleteRoomDto dto);
     }
 }
