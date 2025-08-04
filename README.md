@@ -1,8 +1,13 @@
 Fighting Game
+
 El siguiente juego fue desarrollado:
+
 ⦁	C# para back-end
+
 ⦁	Rect js+ tailwind en el front-end
+
 ⦁	SQL server para Base de datos
+
 
 Para visualizar el proyecto realice lo siguiente:
 
@@ -14,10 +19,13 @@ Update-Database -Context ApplicationDbContext -Project Entity -StartupProject We
 
 
 ⦁	Para el front-end entre a la carpeta de /Front-end luego a /bootcamp y ahí realicen los siguientes comandos:
+
 npm install
+
 npm run dev
 
 ⦁	Ejecute el siguiente script sql en la base datos para tener la información de las cartas:
+
 
 USE GameCards;
 
