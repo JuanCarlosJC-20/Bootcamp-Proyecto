@@ -50,88 +50,96 @@ export const GamePage = () => {
   const currentPlayer = players[currentPlayerIndex];
 
   return (
-    <div className="h-screen bg-gradient-to-b from-[#060E42] to-[#475BDF] relative overflow-hidden">
-      {/* Audio de fondo */}
-      <audio src={music} autoPlay loop />
-      
-      {/* Header del juego */}
-      <GameHeader 
-        currentRound={currentRound}
-        selectedAttribute={selectedAttribute}
-        currentPlayer={currentPlayer}
-        showLaunchAnimation={showLaunchAnimation}
-        timeLeft={timeLeft}
-        onExitClick={handleShowExitModal}
-      />
+    <div
+      className="relative flex flex-col items-center justify-center min-h-screen w-full bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url('https://images5.alphacoders.com/128/1284524.jpg')`,
+      }}
+    >
+      {/* Contenido principal */}
+      <div className="relative z-10 w-full h-full min-h-screen">
+        {/* Audio de fondo */}
+        <audio src={music} autoPlay loop />
 
-      {/* Animación de carta lanzada */}
-      {showLaunchAnimation && launchedCard && (
-        <LaunchAnimation launchedCard={launchedCard} />
-      )}
-
-      {/* Mazo de cartas jugadas en el centro */}
-      {playedCards.length > 0 && !showLaunchAnimation && (
-        <CardStack 
-          playedCards={playedCards} 
-          showCardDetail={showCardDetail}
+        {/* Header del juego */}
+        <GameHeader 
+          currentRound={currentRound}
+          selectedAttribute={selectedAttribute}
+          currentPlayer={currentPlayer}
           showLaunchAnimation={showLaunchAnimation}
+          timeLeft={timeLeft}
+          onExitClick={handleShowExitModal}
         />
-      )}
 
-      {/* Mesa con cartas jugadas (solo para resultados finales) */}
-      {gamePhase === 'results' && playedCards.length > 0 && !showLaunchAnimation && (
-        <GameResults playedCards={playedCards} />
-      )}
-
-      {/* Área central */}
-      <div className="absolute top-20 left-1/2 transform -translate-x-1/2 text-center text-white z-10">
-        {gamePhase !== 'results' && !showLaunchAnimation && (
-          <>
-            {!showCardDetail ? (
-              <div>
-                <div className="text-lg mb-3 bg-gradient-to-r from-white/20 to-white/10 px-4 py-2 rounded-lg backdrop-blur-sm text-white font-semibold shadow-md">
-                  ¡Selecciona tu carta!
-                </div>
-              </div>
-            ) : (
-              <CardSelection 
-                selectedCard={selectedCard}
-                selectedAttribute={selectedAttribute}
-                onAttributeClick={setSelectedAttribute}
-                onConfirm={handleConfirmCard}
-                onCancel={handleCloseCardDetail}
-              />
-            )}
-          </>
+        {/* Animación de carta lanzada */}
+        {showLaunchAnimation && launchedCard && (
+          <LaunchAnimation launchedCard={launchedCard} />
         )}
-      </div>
 
-      {/* Arco de cartas del jugador */}
-      {gamePhase === 'selection' && 
-       !showCardDetail && 
-       !showLaunchAnimation &&
-       currentPlayer && 
-       playerCards[currentPlayer.id] && (
-        <CardArc 
-          cards={playerCards[currentPlayer.id]}
-          usedCards={usedCards[currentPlayer.id]}
-          onCardSelect={handleCardSelect}
+        {/* Mazo de cartas jugadas en el centro */}
+        {playedCards.length > 0 && !showLaunchAnimation && (
+          <CardStack 
+            playedCards={playedCards} 
+            showCardDetail={showCardDetail}
+            showLaunchAnimation={showLaunchAnimation}
+          />
+        )}
+
+        {/* Mesa con cartas jugadas (solo para resultados finales) */}
+        {gamePhase === 'results' && playedCards.length > 0 && !showLaunchAnimation && (
+          <GameResults playedCards={playedCards} />
+        )}
+
+        {/* Área central */}
+        <div className="absolute top-20 left-1/2 transform -translate-x-1/2 text-center text-white z-10">
+          {gamePhase !== 'results' && !showLaunchAnimation && (
+            <>
+              {!showCardDetail ? (
+                <div>
+                  <div className="text-lg mb-3 bg-gradient-to-r from-white/20 to-white/10 px-4 py-2 rounded-lg backdrop-blur-sm text-white font-semibold shadow-md">
+                    ¡Selecciona tu carta!
+                  </div>
+                </div>
+              ) : (
+                <CardSelection 
+                  selectedCard={selectedCard}
+                  selectedAttribute={selectedAttribute}
+                  onAttributeClick={setSelectedAttribute}
+                  onConfirm={handleConfirmCard}
+                  onCancel={handleCloseCardDetail}
+                />
+              )}
+            </>
+          )}
+        </div>
+
+        {/* Arco de cartas del jugador */}
+        {gamePhase === 'selection' && 
+         !showCardDetail && 
+         !showLaunchAnimation &&
+         currentPlayer && 
+         playerCards[currentPlayer.id] && (
+          <CardArc 
+            cards={playerCards[currentPlayer.id]}
+            usedCards={usedCards[currentPlayer.id]}
+            onCardSelect={handleCardSelect}
+          />
+        )}
+
+        {/* Indicadores de jugadores */}
+        <PlayerIndicators 
+          players={players}
+          currentPlayerIndex={currentPlayerIndex}
+          playedCards={playedCards}
         />
-      )}
 
-      {/* Indicadores de jugadores */}
-      <PlayerIndicators 
-        players={players}
-        currentPlayerIndex={currentPlayerIndex}
-        playedCards={playedCards}
-      />
-
-      {/* Modal de confirmación de salida */}
-      <ExitModal 
-        isOpen={showExitModal}
-        onCancel={handleCancelExit}
-        onConfirm={handleConfirmExit}
-      />
+        {/* Modal de confirmación de salida */}
+        <ExitModal 
+          isOpen={showExitModal}
+          onCancel={handleCancelExit}
+          onConfirm={handleConfirmExit}
+        />
+      </div>
     </div>
   );
 };
