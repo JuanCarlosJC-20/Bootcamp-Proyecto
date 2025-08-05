@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../assets/logo.png'
-import music from '../assets/clash.mp3' // Asegúrate de que la ruta esté correcta
+import music from '../assets/clash.mp3' 
 import { Link } from 'react-router-dom'
 
 export const StartPage = () => {

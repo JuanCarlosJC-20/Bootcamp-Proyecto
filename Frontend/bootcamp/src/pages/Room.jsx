@@ -8,9 +8,8 @@ export const Room = () => {
   const [maxPlayers, setMaxPlayers] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [mensaje, setMensaje] = useState('');
-  const [tipoMensaje, setTipoMensaje] = useState(''); // 'success' o 'error'
+  const [tipoMensaje, setTipoMensaje] = useState(''); 
 
-  // Limpiar mensaje después de 5 segundos (excepto si es de éxito, que navega automáticamente)
   useEffect(() => {
     if (mensaje && tipoMensaje === 'error') {
       const timer = setTimeout(() => {
@@ -43,7 +42,7 @@ export const Room = () => {
     }
     
     setIsLoading(true);
-    setMensaje(''); // Limpiar mensajes anteriores
+    setMensaje(''); 
     
     try {
       const roomData = {
@@ -53,7 +52,6 @@ export const Room = () => {
 
       console.log('Creando sala completa:', roomData);
 
-      // UNA SOLA LLAMADA que crea todo: Room + Game + Players
       //const response = await fetch('https://localhost:5084/api/Room/create-complete-room', {
       const response = await fetch('https://localhost:7221/api/Room/create-complete-room', {
 
@@ -75,7 +73,6 @@ export const Room = () => {
       setMensaje(`Sala "${roomName}" creada exitosamente con ${maxPlayers} jugadores`);
       setTipoMensaje('success');
       
-      // Navegar después de 2 segundos para que el usuario vea el mensaje
       setTimeout(() => {
         navigate('/game', { 
           state: { 
@@ -107,7 +104,6 @@ export const Room = () => {
         </button>
       </div>
 
-      {/* Contenido principal centrado */}
       <div className='flex-1 flex items-center justify-center p-4 pt-0'>
         <div className='w-full max-w-lg text-center -mt-8'>
           
@@ -127,7 +123,6 @@ export const Room = () => {
             </div>
           )}
 
-          {/* Campo nombre de la sala */}
           <div className='mb-12'>
             <label className='text-white text-2xl font-bold block mb-6 text-left'>
               Ingrese El Nombre De La Sala
@@ -142,7 +137,6 @@ export const Room = () => {
             />
           </div>
 
-          {/* Campo cantidad de jugadores */}
           <div className='mb-16'>
             <label className='text-white text-2xl font-bold block mb-6 text-left'>
               Ingrese El Número Máximo De Jugadores

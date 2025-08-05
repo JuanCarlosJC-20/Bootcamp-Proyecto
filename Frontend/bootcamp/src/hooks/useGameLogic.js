@@ -5,7 +5,7 @@ export const useGameLogic = () => {
   const location = useLocation();
   const navigate = useNavigate();
   
-  // Estados del juego
+  // Estados del juego mediante funciones 
   const [gameData, setGameData] = useState(null);
   const [currentRound] = useState(1);
   const [timeLeft, setTimeLeft] = useState(0);
@@ -21,7 +21,6 @@ export const useGameLogic = () => {
   const [showLaunchAnimation, setShowLaunchAnimation] = useState(false);
   const [showExitModal, setShowExitModal] = useState(false);
 
-  // Datos de navegación
   useEffect(() => {
     if (location.state) {
       setGameData(location.state);
@@ -42,7 +41,7 @@ export const useGameLogic = () => {
     }
   }, [location, navigate]);
 
-  // Cargar cartas asignadas del backend
+//cargan cartas del back por el fectch medianrte el id del game
   useEffect(() => {
     const loadPlayerCards = async () => {
       if (gameData?.game?.id) {
@@ -79,7 +78,7 @@ export const useGameLogic = () => {
         } catch (error) {
           console.error('Error al cargar cartas de jugadores:', error);
           
-          // Fallback a cartas dummy si hay error
+          // diseño de cartas si hay error
           const dummyCard = {
             id: 1,
             name: "Carta Ejemplo",
@@ -105,7 +104,7 @@ export const useGameLogic = () => {
     loadPlayerCards();
   }, [gameData]);
 
-  // Timer
+  //temporizador 
   useEffect(() => {
     const timer = setTimeout(() => setTimeLeft(timeLeft + 1), 1000);
     return () => clearTimeout(timer);
@@ -175,7 +174,6 @@ export const useGameLogic = () => {
         }, 1500);
       } catch (error) {
         console.error('Error al marcar carta como usada:', error);
-        // Continuar con la lógica del frontend aunque falle el backend
         setTimeout(() => {
           setPlayedCards(prev => [...prev, newPlayedCard]);
           setUsedCards(prev => ({

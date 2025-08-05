@@ -1,4 +1,3 @@
-// src/components/CardGrid.jsx
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import CardItem from './Cards';
 
@@ -24,7 +23,6 @@ const CardGrid = () => {
       });
   }, []);
 
-  // Memoizar las cartas actuales para evitar re-renders innecesarios
   const currentCards = useMemo(() => {
     const startIndex = currentPage * cardsPerPage;
     const endIndex = startIndex + cardsPerPage;
@@ -68,7 +66,6 @@ const CardGrid = () => {
 
   return (
     <div className="flex flex-col items-center min-h-screen">
-      {/* Loading spinner cuando se cargan las cartas por primera vez */}
       {isLoading ? (
         <div className="flex flex-col items-center justify-center min-h-[500px]">
           <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-[#980E0E] mb-4"></div>
@@ -76,7 +73,6 @@ const CardGrid = () => {
         </div>
       ) : (
         <>
-          {/* Navigation Header */}
           <div className="flex items-center justify-between w-full max-w-7xl mb-4 px-4">
             <button
               onClick={handlePrevPage}
@@ -114,7 +110,6 @@ const CardGrid = () => {
             </button>
           </div>
 
-          {/* Cards Grid con transición suave */}
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-4 max-w-6xl transition-opacity duration-300 ${
             isTransitioning ? 'opacity-50' : 'opacity-100'
           }`}>
@@ -123,7 +118,6 @@ const CardGrid = () => {
             ))}
           </div>
 
-          {/* Indicador de puntos de página */}
           <div className="flex gap-2 mt-4">
             {Array.from({ length: totalPages }).map((_, index) => (
               <button

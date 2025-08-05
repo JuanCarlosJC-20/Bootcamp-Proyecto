@@ -1,7 +1,6 @@
 import React from 'react';
 import Cards from './Cards';
 
-// Función para calcular la posición en arco con superposición
 const getArcPosition = (index, totalCards) => {
   const totalAngle = 80;
   const startAngle = -totalAngle / 2;
@@ -26,7 +25,6 @@ const getArcPosition = (index, totalCards) => {
 const CardArc = ({ cards, usedCards, onCardSelect }) => {
   return (
     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
-      {/* Contenedor del arco de cartas más compacto */}
       <div className="relative flex justify-center items-end" style={{ width: '400px', height: '180px' }}>
         {cards.slice(0, 8).map((card, index) => {
           const isUsed = usedCards?.includes(index);

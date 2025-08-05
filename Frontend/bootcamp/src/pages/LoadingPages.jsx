@@ -17,7 +17,6 @@ export const LoadingPage = () => {
 
   return (
     <div className="h-screen w-full flex items-center justify-center ">
-      {/* Audio de fondo */}
       <audio src={music} autoPlay loop />
       
       <DotLottieReact

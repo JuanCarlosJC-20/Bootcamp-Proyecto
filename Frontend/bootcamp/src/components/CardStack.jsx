@@ -9,9 +9,9 @@ const CardStack = ({ playedCards, showCardDetail = false, showLaunchAnimation = 
   // Determinar el z-index basado en el estado del juego
   const getZIndex = () => {
     if (showCardDetail || showLaunchAnimation) {
-      return 5; // Al fondo cuando hay otras interfaces activas
+      return 5; 
     }
-    return 30; // Nivel medio cuando no hay interferencias
+    return 30; 
   };
 
   return (

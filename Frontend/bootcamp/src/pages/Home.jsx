@@ -12,7 +12,6 @@ export const Home = () => {
         backgroundImage: "url('https://wallpapers.com/images/hd/clash-royale-background-xlpgmv93cqdspkzu.jpg')"
       }}
     >
-      {/* Música de fondo */}
       <audio src={musica} autoPlay loop />
 
       <Link to="/Cards">

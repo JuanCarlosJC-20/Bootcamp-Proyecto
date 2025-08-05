@@ -11,7 +11,7 @@ export const CardsPage = () => {
 
   return (
     <div className="flex flex-col h-screen relative">
-      {/* Botones fijos a la izquierda */}
+
       <div className="gap-4 flex flex-col items-start py-2 fixed z-10 ">
         {/* Botón Volver */}
         <button
@@ -21,7 +21,7 @@ export const CardsPage = () => {
           <img src={flecha} alt="Flecha" className="w-20 h-auto mr-2" />
         </button>
 
-        {/* Botón Añadir (abre modal) */}
+        {/* Botón Añadir  */}
         <div
           onClick={() => setShowAddCard(true)}
           className="cursor-pointer rounded-r-2xl w-48 h-16 bg-[#2C8246] text-white text-3xl shadow-lg font-bold flex items-center hover:bg-[#115826] transition-colors duration-300 px-6 gap-4"
@@ -31,7 +31,6 @@ export const CardsPage = () => {
         </div>
       </div>
 
-      {/* Contenido desplazado hacia abajo por fixed */}
       <div className="items-center flex flex-col gap-4 p-4 mt-20">
         {/* Título */}
         <p
@@ -48,13 +47,12 @@ export const CardsPage = () => {
           Cartas
         </p>
 
-        {/* Grilla de cartas */}
+        {/*div con grid de cartas */}
         <div className="bg-[#B5B5B5] rounded-3xl shadow-lg shadow-blue-700/40 w-full max-w-7xl p-6 min-h-[600px]">
           <CardGrid />
         </div>
       </div>
 
-      {/* Modal para agregar carta */}
       {showAddCard && <AddCard onClose={() => setShowAddCard(false)} />}
     </div>
   );

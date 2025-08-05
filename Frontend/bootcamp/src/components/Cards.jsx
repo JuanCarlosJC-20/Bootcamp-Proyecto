@@ -7,15 +7,14 @@ const Cards = ({
   isUsed = false, 
   onClick = null, 
   className = '',
-  onAttributeClick = null, // Nueva función para manejar clicks en atributos
-  selectedAttribute = null // Atributo actualmente seleccionado
+  onAttributeClick = null, 
+  selectedAttribute = null 
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [retryCount, setRetryCount] = useState(0);
   const [isImageVisible, setIsImageVisible] = useState(false);
 
-  // Configuración de tamaños
   const sizes = {
     small: { 
       container: 'w-20 h-28', 
@@ -42,31 +41,27 @@ const Cards = ({
 
   const currentSize = sizes[size];
 
-  // Múltiples métodos para obtener la imagen de Google Drive
+  // diferentes métodos para obtener la imagen de Google Drive
   const getImageUrl = useCallback((url, attempt = 0) => {
     if (!url) return '';
 
-    // Extraer el ID de Google Drive
     const match = url.match(/[?&]id=([a-zA-Z0-9-_]+)/);
     if (!match) return url;
 
     const fileId = match[1];
     let finalUrl = '';
 
-    // Diferentes métodos según el intento
+    // Diferentes métodos según el intento para mostrar la imagene que estan en  un drive
     switch (attempt) {
       case 0:
-        // Método directo de Google Drive
         finalUrl = `https://drive.google.com/uc?export=view&id=${fileId}`;
         break;
 
       case 1:
-        // Método alternativo con diferentes parámetros
         finalUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
         break;
 
       case 2:
-        // Usando lh3.googleusercontent.com (a veces funciona mejor)
         finalUrl = `https://lh3.googleusercontent.com/d/${fileId}=w400-h400`;
         break;
 
@@ -81,7 +76,6 @@ const Cards = ({
   const handleImageError = useCallback(() => {
     console.log('Error loading image for card:', card.name);
 
-    // Intentar con diferentes métodos si el primer intento falla
     if (retryCount < 2) {
       setTimeout(() => {
         setRetryCount(prev => prev + 1);
@@ -96,7 +90,6 @@ const Cards = ({
     }
   }, [card.name, retryCount]);
 
-  // Reset estados cuando cambia la carta
   useEffect(() => {
     setImageLoaded(false);
     setImageError(false);
@@ -107,12 +100,11 @@ const Cards = ({
   const handleImageLoad = () => {
     setImageLoaded(true);
     setImageError(false);
-    setTimeout(() => setIsImageVisible(true), 100); // Pequeño delay para transición suave
+    setTimeout(() => setIsImageVisible(true), 100); 
   };
 
   const imageUrl = getImageUrl(card.image, retryCount);
 
-  // Placeholder image si todo falla
   const PlaceholderImage = () => (
     <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 text-gray-600">
       <div className="text-4xl mb-2">🎴</div>
@@ -136,7 +128,6 @@ const Cards = ({
 
       {size === 'large' ? (
         <>
-          {/* Header para cartas grandes */}
           <div className="flex items-center w-64 h-16 rounded-xl bg-gradient-to-r from-[#B7A5A5] to-[#6C6E72] shadow-md gap-6 mb-2">
             <div className="bg-[#D8C9A3] text-black font-bold px-3 py-1 rounded-xl">
               Lv {card.letterLevel}
@@ -148,14 +139,12 @@ const Cards = ({
         </>
       ) : (
         <>
-          {/* Header simple para cartas pequeñas/medianas */}
           <h3 className={`${currentSize.text} font-bold text-center text-gray-800 truncate w-full px-1 mt-2`}>
             {card.name}
           </h3>
         </>
       )}
         
-      {/* Imagen de la carta */}
       <div className={`${size === 'large' ? 'w-30 h-50' : currentSize.image} rounded-${size === 'large' ? '4xl' : 'full'} border-${size === 'large' ? '4' : '2'} border-${size === 'large' ? 'black' : 'gray-300'} justify-center flex bg-gray-100 relative overflow-hidden`}>
         {!imageError ? (
           <>
@@ -172,7 +161,6 @@ const Cards = ({
               referrerPolicy="no-referrer"
             />
 
-            {/* Loading spinner */}
             {(!imageLoaded || !isImageVisible) && !imageError && (
               <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#980E0E]"></div>
@@ -184,7 +172,6 @@ const Cards = ({
         )}
       </div>
 
-      {/* Estadísticas */}
       {size === 'large' ? (
         <div className="grid grid-cols-1 gap-1 w-full text-sm text-center mt-2 border-4 border-[#932828] rounded-2xl bg-[#D7C39F]">
           <div 
@@ -248,7 +235,6 @@ const Cards = ({
         </div>
       )}
       
-      {/* Overlay para cartas usadas */}
       {isUsed && (
         <div className="absolute inset-0 bg-black bg-opacity-50 rounded-xl flex items-center justify-center">
           <span className="text-white font-bold text-xs">USADA</span>

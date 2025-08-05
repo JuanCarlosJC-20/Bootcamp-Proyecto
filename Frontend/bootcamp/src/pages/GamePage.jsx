@@ -58,10 +58,9 @@ export const GamePage = () => {
     >
       {/* Contenido principal */}
       <div className="relative z-10 w-full h-full min-h-screen">
-        {/* Audio de fondo */}
+
         <audio src={music} autoPlay loop />
 
-        {/* Header del juego */}
         <GameHeader 
           currentRound={currentRound}
           selectedAttribute={selectedAttribute}
@@ -71,12 +70,10 @@ export const GamePage = () => {
           onExitClick={handleShowExitModal}
         />
 
-        {/* Animación de carta lanzada */}
         {showLaunchAnimation && launchedCard && (
           <LaunchAnimation launchedCard={launchedCard} />
         )}
 
-        {/* Mazo de cartas jugadas en el centro */}
         {playedCards.length > 0 && !showLaunchAnimation && (
           <CardStack 
             playedCards={playedCards} 
@@ -90,7 +87,6 @@ export const GamePage = () => {
           <GameResults playedCards={playedCards} />
         )}
 
-        {/* Área central */}
         <div className="absolute top-20 left-1/2 transform -translate-x-1/2 text-center text-white z-10">
           {gamePhase !== 'results' && !showLaunchAnimation && (
             <>
@@ -113,7 +109,7 @@ export const GamePage = () => {
           )}
         </div>
 
-        {/* Arco de cartas del jugador */}
+        {/* mazo del jugador arco */}
         {gamePhase === 'selection' && 
          !showCardDetail && 
          !showLaunchAnimation &&
@@ -126,14 +122,12 @@ export const GamePage = () => {
           />
         )}
 
-        {/* Indicadores de jugadores */}
         <PlayerIndicators 
           players={players}
           currentPlayerIndex={currentPlayerIndex}
           playedCards={playedCards}
         />
 
-        {/* Modal de confirmación de salida */}
         <ExitModal 
           isOpen={showExitModal}
           onCancel={handleCancelExit}

@@ -14,7 +14,6 @@ const AddCard = ({ onClose }) => {
 
   const [error, setError] = useState('');
 
-  // Labels descriptivos para cada campo
   const fieldLabels = {
     name: 'Ingresa el nombre de la carta',
     image: 'Ingresa la URL de la imagen',
@@ -35,7 +34,7 @@ const AddCard = ({ onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(''); // limpia errores previos
+    setError(''); 
 
     const requiredFields = ['name', 'image', 'health', 'letterLevel', 'damage', 'endurance', 'power', 'scope'];
     for (let key of requiredFields) {
@@ -64,7 +63,6 @@ const AddCard = ({ onClose }) => {
       const json = await res.json();
 
       if (!res.ok) {
-        // Si hay errores de unicidad, los muestra como lista
         if (json.errores && Array.isArray(json.errores)) {
           setError(json.errores.join(' • '));
         } else if (json.mensaje) {
@@ -75,7 +73,6 @@ const AddCard = ({ onClose }) => {
         return;
       }
 
-      // Si todo fue bien
       onClose(); // cerrar modal
     } catch {
       setError('Error de red o del servidor.');
@@ -120,7 +117,6 @@ const AddCard = ({ onClose }) => {
             </div>
           )}
 
-          {/* Botones en una fila */}
           <div className="flex gap-4 mt-6">
             <button
               type="button"
