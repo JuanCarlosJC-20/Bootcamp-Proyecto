@@ -9,7 +9,7 @@ namespace Back_end.Dto.PlayerCardDto
         public int IdPlayer { get; set; }
         public int IdCard { get; set; }
         public bool IsUsed { get; set; }
-        public PlayerDto Player { get; set; } = new();
-        public CardsDto Card { get; set; } = new();
+x        public PlayerDto.PlayerDto Player { get; set; } = new(); // Fully qualify PlayerDto to avoid namespace conflict
+        public CardsDto.CardsDto Card { get; set; } = new(); // Fully qualify CardsDto to resolve ambiguity
     }
 }

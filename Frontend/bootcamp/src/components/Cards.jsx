@@ -195,7 +195,7 @@ const Cards = ({
           >
             <div className={`font-bold transition-colors ${
               selectedAttribute === 'PODER' ? 'text-white' : 'text-black hover:text-red-700'
-            }`}>Power {card.power}</div>
+            }`}>Poder {card.power}</div>
           </div>
           <div 
             className={`p-1 rounded-lg transition-colors ${
@@ -205,7 +205,7 @@ const Cards = ({
           >
             <div className={`font-bold transition-colors ${
               selectedAttribute === 'ATAQUE' ? 'text-white' : 'text-black hover:text-orange-700'
-            }`}>Damage {card.damage}</div>
+            }`}>Ataque {card.damage}</div>
           </div>
           <div 
             className={`p-1 rounded-lg transition-colors ${
@@ -215,7 +215,7 @@ const Cards = ({
           >
             <div className={`font-bold transition-colors ${
               selectedAttribute === 'SALUD' ? 'text-white' : 'text-black hover:text-green-700'
-            }`}>Health {card.health}</div>
+            }`}>Salud {card.health}</div>
           </div>
           <div 
             className={`p-1 rounded-lg transition-colors ${
@@ -225,7 +225,7 @@ const Cards = ({
           >
             <div className={`font-bold transition-colors ${
               selectedAttribute === 'RESISTENCIA' ? 'text-white' : 'text-black hover:text-blue-700'
-            }`}>Endurance {card.endurance}</div>
+            }`}>Resistencia {card.endurance}</div>
           </div>
           <div 
             className={`p-1 rounded-lg transition-colors ${
@@ -235,7 +235,7 @@ const Cards = ({
           >
             <div className={`font-bold transition-colors ${
               selectedAttribute === 'ALCANCE' ? 'text-white' : 'text-black hover:text-yellow-700'
-            }`}>Scope {card.scope}</div>
+            }`}>Alcance {card.scope}</div>
           </div>
         </div>
       ) : size === 'medium' ? (
