@@ -17,9 +17,6 @@ namespace Utilities.Exceptions
             }
         }
 
-        /// <summary>
-        /// Excepción lanzada cuando no se encuentra una entidad en el sistema.
-        /// </summary>
         public class EntityNotFoundException : BusinessException
         {
         
@@ -48,14 +45,9 @@ namespace Utilities.Exceptions
             }
         }
 
-        /// <summary>
-        /// Excepción lanzada cuando los datos proporcionados no cumplen con las reglas de validación.
-        /// </summary>
         public class ValidationException : BusinessException
         {
-            /// <summary>
-            /// Campo que no cumple con la validación.
-            /// </summary>
+            
             public string PropertyName { get; }
 
             public ValidationException(string message) : base(message)
@@ -73,14 +65,8 @@ namespace Utilities.Exceptions
             }
         }
 
-        /// <summary>
-        /// Excepción lanzada cuando se intenta realizar una operación que viola reglas de negocio.
-        /// </summary>
         public class BusinessRuleViolationException : BusinessException
         {
-            /// <summary>
-            /// Código que identifica la regla de negocio violada.
-            /// </summary>
             public string RuleCode { get; }
 
 
@@ -99,19 +85,10 @@ namespace Utilities.Exceptions
             }
         }
 
-        /// <summary>
-        /// Excepción lanzada cuando se intenta acceder a un recurso sin los permisos adecuados.
-        /// </summary>
         public class UnauthorizedAccessBusinessException : BusinessException
         {
-            /// <summary>
-            /// Recurso al que se intentó acceder.
-            /// </summary>
             public string Resource { get; }
 
-            /// <summary>
-            /// Tipo de operación que se intentó realizar.
-            /// </summary>
             public string Operation { get; }
 
             public UnauthorizedAccessBusinessException(string message) : base(message)
@@ -130,14 +107,8 @@ namespace Utilities.Exceptions
             }
         }
 
-        /// <summary>
-        /// Excepción lanzada cuando ocurre un error al interactuar con recursos externos como bases de datos o servicios.
-        /// </summary>
         public class ExternalServiceException : BusinessException
         {
-            /// <summary>
-            /// Nombre del servicio externo que generó el error.
-            /// </summary>
             public string ServiceName { get; }
 
 

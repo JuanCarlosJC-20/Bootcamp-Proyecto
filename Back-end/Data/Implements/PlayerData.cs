@@ -17,6 +17,8 @@ namespace Data.Implements
         {
         }
 
+
+        //obtiene lo jugadores que tienen un mismo id de game 
         public async Task<IEnumerable<Player>> GetPlayersByGameIdAsync(int gameId)
         {
             return await _context.Set<Player>()

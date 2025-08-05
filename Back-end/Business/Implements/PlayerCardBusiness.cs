@@ -39,7 +39,7 @@ namespace Business.Implements
 
             try
             {
-                // 1. Obtener todos los jugadores del juego
+                // Obtener todos los jugadores del game
                 var players = await _playerBusiness.GetByGameIdAsync(gameId);
                 if (!players.Any())
                 {
@@ -47,7 +47,7 @@ namespace Business.Implements
                     return new List<PlayerCardDto>();
                 }
 
-                // 2. Obtener todas las cartas disponibles
+                // Obtener todas las cartas disponibles en el game
                 var allCards = await _cardsBusiness.GetAllAsync();
                 if (!allCards.Any())
                 {
@@ -58,7 +58,7 @@ namespace Business.Implements
                 var assignedCards = new List<PlayerCardDto>();
                 var random = new Random();
 
-                // 3. Asignar cartas aleatorias a cada jugador
+                // Asignar cartas aleatorias unicas  a cada jugador
                 foreach (var player in players)
                 {
                     _logger.LogDebug("Asignando cartas al jugador {PlayerId} - {PlayerName}", player.Id, player.NamePlayer);

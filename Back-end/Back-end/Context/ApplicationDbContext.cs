@@ -24,7 +24,7 @@ namespace Back_end.Context
 
         public ApplicationDbContext() { }
 
-        // DB sets actualizados - CORREGIDO: Cards en lugar de Card
+        // DB sets 
         public DbSet<Cards> Cards { get; set; }
         public DbSet<Game> Games { get; set; }
         public DbSet<Room> Rooms { get; set; }
@@ -35,21 +35,18 @@ namespace Back_end.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configuración de Game-Room (1:1)
             modelBuilder.Entity<Game>()
                 .HasOne(g => g.Room)
                 .WithOne(r => r.Game)
                 .HasForeignKey<Game>(g => g.IdRoom)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Configuración de Player
             modelBuilder.Entity<Player>()
                 .HasOne(p => p.Game)
                 .WithMany(g => g.Players)
                 .HasForeignKey(p => p.IdGame)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Configuración de PlayerCard (tabla intermedia)
             modelBuilder.Entity<PlayerCard>()
                 .HasOne(pc => pc.Player)
                 .WithMany(p => p.PlayerCards)
@@ -62,26 +59,23 @@ namespace Back_end.Context
                 .HasForeignKey(pc => pc.IdCard)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Configuración de Round
             modelBuilder.Entity<Round>()
                 .HasOne(r => r.Game)
                 .WithMany(g => g.Rounds)
                 .HasForeignKey(r => r.IdGame)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Configuración de Turn - CAMBIO IMPORTANTE AQUÍ
-            // Usamos NoAction para evitar múltiples rutas de cascada
             modelBuilder.Entity<Turn>()
                 .HasOne(t => t.Round)
-                .WithMany(r => r.Turn)  // CORREGIDO: Turns en lugar de Turn
+                .WithMany(r => r.Turn)  
                 .HasForeignKey(t => t.IdRound)
-                .OnDelete(DeleteBehavior.NoAction);  // CAMBIADO A NoAction
+                .OnDelete(DeleteBehavior.NoAction);  
 
             modelBuilder.Entity<Turn>()
                 .HasOne(t => t.Player)
-                .WithMany(p => p.Turn)  // CORREGIDO: Turns en lugar de Turn
+                .WithMany(p => p.Turn)  
                 .HasForeignKey(t => t.IdPlayer)
-                .OnDelete(DeleteBehavior.NoAction);  // CAMBIADO A NoAction
+                .OnDelete(DeleteBehavior.NoAction);  
 
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

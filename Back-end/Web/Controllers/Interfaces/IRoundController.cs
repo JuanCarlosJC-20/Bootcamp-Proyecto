@@ -1,9 +1,14 @@
-﻿//using Back_end.Dto.RaundDto;
-//using Back_end.Model;
+﻿
+using Back_end.Dto.RaundDto;
+using Back_end.Model;
+using Web.Controllers.Interfaces;
 
-//namespace Web.Controllers.Interfaces
-//{
-//    public interface IRoundController : IBaseController<RoundDto, Round>
-//    {
-//    }
-//}
+namespace Web.Controllers.Interface
+{
+    public interface IRoundController : IBaseController<Round, RoundDto>
+    {
+
+    }
+}
+
+

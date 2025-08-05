@@ -13,7 +13,6 @@ namespace Back_end.Dto.PlayerCardDto
         public int IdPlayer { get; set; }
         public bool IsUsed { get; set; }
 
-        // Información de la carta incluida
-        public Back_end.Dto.CardsDto.CardsDto? Card { get; set; } // Fully qualify the type to resolve ambiguity
+        public Back_end.Dto.CardsDto.CardsDto? Card { get; set; } 
     }
 }

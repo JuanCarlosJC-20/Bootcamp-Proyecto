@@ -26,7 +26,7 @@ namespace Web.Controllers.Implements
         }
 
         [HttpPost("create-complete-room")]
-        public async Task<IActionResult> CreateCompleteRoom([FromBody] CreateCompleteRoomDto dto)
+        public async Task<IActionResult> CreateCompleteRoom([FromBody] RoomDto dto)
         {
             try
             {

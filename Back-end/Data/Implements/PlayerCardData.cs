@@ -17,22 +17,23 @@ namespace Data.Implements
         {
         }
 
-        public async Task<IEnumerable<PlayerCard>> GetPlayerCardsWithDetailsAsync(int playerId)
+        //en la sigueinte consulta especifica obtenemos cada jugador con su carta asignada mas los detalles de la carta y detalles del jugador
+        public async Task<IEnumerable<PlayerCard>> GetPlayerCardsWithDetailsAsync(int idPlayer)
         {
             return await _context.Set<PlayerCard>()
                 .Include(pc => pc.Card)
                 .Include(pc => pc.Player)
-                .Where(pc => pc.IdPlayer == playerId)
+                .Where(pc => pc.IdPlayer == idPlayer)
                 .OrderBy(pc => pc.id)
                 .ToListAsync();
         }
-
-        public async Task<IEnumerable<PlayerCard>> GetGamePlayerCardsAsync(int gameId)
+        //la siguientes es una consula especifica que Obtine todos los jugadores de una partida con un mismo gameId mas la carta asignada
+        public async Task<IEnumerable<PlayerCard>> GetGamePlayerCardsAsync(int idGame)
         {
             return await _context.Set<PlayerCard>()
                 .Include(pc => pc.Card)
                 .Include(pc => pc.Player)
-                .Where(pc => pc.Player.IdGame == gameId)
+                .Where(pc => pc.Player.IdGame == idGame)
                 .OrderBy(pc => pc.Player.id)
                 .ThenBy(pc => pc.id)
                 .ToListAsync();

@@ -9,7 +9,7 @@ namespace Web.Controllers.Interface
 {
     public interface IRoomController : IBaseController<Room, RoomDto>
     {
-        Task<IActionResult> CreateCompleteRoom(CreateCompleteRoomDto dto);
+        Task<IActionResult> CreateCompleteRoom(RoomDto dto);
     }
 }
 

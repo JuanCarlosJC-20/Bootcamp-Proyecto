@@ -13,7 +13,6 @@ namespace Back_end.Model
         public int NumRound { get; set; }
         public int IdPlayerWinner { get; set; }
 
-        //Foreign keys
         public int IdGame { get; set; }
         public Game Game { get; set; }
 

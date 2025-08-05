@@ -11,6 +11,5 @@ namespace Data.Interfaces
     public interface ICardsData : IBaseData<Cards>
     {
         Task<bool> ExistsByPropertyAsync<TValue>(string propertyName, TValue value);
-        Task<bool> ExistsCardWithSameDataAsync(Cards card);
     }
 }

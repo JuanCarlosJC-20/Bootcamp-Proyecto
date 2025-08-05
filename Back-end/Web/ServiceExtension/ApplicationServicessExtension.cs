@@ -11,7 +11,7 @@ namespace Web.ServiceExtension
             // Registra validadores
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
-            // Configura CORS
+            // Configura  el CORS
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowSpecificOrigins", builder =>
@@ -22,7 +22,6 @@ namespace Web.ServiceExtension
                 });
             });
 
-           // services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
          
 
             return services;

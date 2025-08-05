@@ -36,15 +36,15 @@ namespace Business.Implements
             _context = context;
         }
 
-        public async Task<CompleteRoomResponseDto> CreateCompleteRoomAsync(CreateCompleteRoomDto dto)
+        public async Task<CompleteRoomResponseDto> CreateCompleteRoomAsync(RoomDto dto)
         {
-            _logger.LogInformation("Iniciando creación completa de sala: {RoomName} con {NumPlayers} jugadores", 
+            _logger.LogInformation("Inicia creación completa de sala: {RoomName} con {NumPlayers} jugadores", 
                 dto.RoomName, dto.NumPlayers);
 
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
-                // 1. Crear la sala
+                // Crear la sala
                 var roomDto = new RoomDto
                 {
                     RoomName = dto.RoomName,
@@ -54,7 +54,7 @@ namespace Business.Implements
                 var createdRoom = await CreateAsync(roomDto);
                 _logger.LogInformation("Sala creada con ID: {RoomId}", createdRoom.Id);
 
-                // 2. Crear el juego asociado a la sala
+                //Crear el game conectado a la sala
                 var gameDto = new GameDto
                 {
                     GameTime = DateTime.UtcNow,
@@ -65,12 +65,12 @@ namespace Business.Implements
                 var createdGame = await _gameBusiness.CreateAsync(gameDto);
                 _logger.LogInformation("Juego creado con ID: {GameId}", createdGame.Id);
 
-                // 3. Generar nombres aleatorios para los jugadores
+                // Generar nombres aleatorios para cada jugadores ssegun meses del año en ingles 
                 var playerNames = PlayerNameGenerator.GenerateRandomNames(dto.NumPlayers);
                 _logger.LogInformation("Nombres generados para jugadores: {PlayerNames}", 
                     string.Join(", ", playerNames));
 
-                // 4. Crear todos los jugadores
+                // Crear todos los jugadores con nombres unicos
                 var createdPlayers = new List<PlayerDto>();
                 for (int i = 0; i < playerNames.Count; i++)
                 {
@@ -86,7 +86,7 @@ namespace Business.Implements
                         i + 1, playerNames[i], createdPlayer.Id);
                 }
 
-                // 5. Asignar cartas aleatorias a todos los jugadores
+                // Asignar cartas aleatorias a cada  jugador, utilizamos el metodo que esta en playerCardBusinnes de asignar cartas a cada jugador
                 _logger.LogInformation("Asignando cartas a todos los jugadores del juego {GameId}", createdGame.Id);
                 var assignedCards = await _playerCardBusiness.AssignCardsToPlayersAsync(createdGame.Id, 8);
                 _logger.LogInformation("Se asignaron {CardCount} cartas a los jugadores", assignedCards.Count);

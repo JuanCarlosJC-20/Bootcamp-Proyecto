@@ -1,9 +1,14 @@
-﻿//using Back_end.Dto.GameDto;
-//using Back_end.Model;
+﻿
+using Back_end.Dto.GameDto;
+using Back_end.Model;
+using Web.Controllers.Interfaces;
 
-//namespace Web.Controllers.Interfaces
-//{
-//    public interface IGameController : IBaseController<GameDto, Game>
-//    {
-//    }
-//}
+namespace Web.Controllers.Interface
+{
+    public interface IGameController : IBaseController<Game, GameDto>
+    {
+
+    }
+}
+
+

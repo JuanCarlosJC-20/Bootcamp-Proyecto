@@ -13,7 +13,6 @@ namespace Back_end.Model
        public string ValueAttribute { get; set; }
          public int IdPlayer { get; set; }
 
-        //Forgein keys
         public int IdRound { get; set; }
         public Round Round { get; set; }
 

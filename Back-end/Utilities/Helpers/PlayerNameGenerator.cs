@@ -10,21 +10,17 @@ namespace Utilities.Helpers
         public static List<string> GenerateRandomNames(int count)
         {
             var names = new List<string>();
-            var usedCombinations = new HashSet<string>();
+            var usedCombinations = new HashSet<string>(); //HasSet no permite duplicados 
             var random = new Random();
 
             while (names.Count < count)
             {
-                // Seleccionar mes aleatorio
                 var randomMonth = MonthNames[random.Next(MonthNames.Length)];
                 
-                // Generar año aleatorio entre 2000 y 3000
                 var randomYear = random.Next(2000, 3001);
                 
-                // Crear la combinación
                 var combination = $"{randomMonth}{randomYear}";
                 
-                // Verificar que no se repita
                 if (!usedCombinations.Contains(combination))
                 {
                     usedCombinations.Add(combination);

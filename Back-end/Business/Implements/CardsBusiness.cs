@@ -24,7 +24,7 @@ namespace Business.Implements
 
         public override async Task<CardsDto> CreateAsync(CardsDto dto)
         {
-            _logger.LogInformation("Validando unicidad de campos para nueva carta: {Name}", dto.Name);
+            _logger.LogInformation("Validando que los campos sean unicos para nueva carta: {Name}", dto.Name);
             var errores = new List<string>();
 
             var camposUnicos = new Dictionary<string, object>

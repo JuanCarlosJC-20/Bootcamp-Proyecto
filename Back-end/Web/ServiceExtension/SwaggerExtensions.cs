@@ -1,7 +1,5 @@
-﻿// Web/ServiceExtension/SwaggerExtensions.cs
-using Microsoft.OpenApi.Models;
+﻿using Microsoft.OpenApi.Models;
 using System.Reflection;
-// Agrega la directiva using necesaria para AddSwaggerGen
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Web.ServiceExtension
@@ -10,15 +8,10 @@ namespace Web.ServiceExtension
     {
         public static IServiceCollection AddSwaggerDocumentation(this IServiceCollection services)
         {
-            // Añade soporte para API Explorer (necesario para Swagger)
             services.AddEndpointsApiExplorer();
 
             // Configura Swagger
             object value = services.AddSwaggerGen(c =>
-       
-            // Asegúrate de tener instalada la referencia al paquete NuGet Swashbuckle.AspNetCore
-            // Puedes instalarlo ejecutando en la terminal:
-            // dotnet add package Swashbuckle.AspNetCore
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
@@ -44,7 +37,6 @@ namespace Web.ServiceExtension
                     }
                 });
 
-                // Configuración para incluir comentarios XML de documentación
                 try
                 {
                     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -56,7 +48,6 @@ namespace Web.ServiceExtension
                 }
                 catch
                 {
-                    // Simplemente ignoramos si no hay archivo XML disponible
                 }
             });
 

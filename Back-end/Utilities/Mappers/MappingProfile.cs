@@ -1,4 +1,4 @@
-﻿using AutoMapper; // Agrega esta línea para importar el espacio de nombres de AutoMapper
+﻿using AutoMapper;
 using Back_end.Dto.CardsDto;
 using Back_end.Dto.GameDto;
 using Back_end.Dto.PlayerCardDto;
@@ -11,7 +11,6 @@ using Back_end.Model;
 
 namespace Utilities.Mappers
 {
-    // Cambia el nombre de la clase para evitar conflicto con AutoMapper.Profile
     public class MappingProfile: Profile
     {
         public MappingProfile()

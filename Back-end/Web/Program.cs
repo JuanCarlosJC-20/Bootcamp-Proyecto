@@ -10,12 +10,10 @@ using Data.Implements.Base;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Entity Framework
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -34,7 +32,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Data Layer - Registrar tanto las interfaces específicas como IBaseData<T>
 builder.Services.AddScoped<ICardsData, CardsData>();
 builder.Services.AddScoped<IBaseData<Cards>, CardsData>();
 
@@ -53,7 +50,6 @@ builder.Services.AddScoped<IBaseData<PlayerCard>, PlayerCardData>();
 builder.Services.AddScoped<ITurnData, TurnData>();
 builder.Services.AddScoped<IBaseData<Turn>, TurnData>();
 
-// Business Layer
 builder.Services.AddScoped<ICardsBusiness, CardsBusiness>();
 builder.Services.AddScoped<IGameBusiness, GameBusiness>();
 builder.Services.AddScoped<IRoomBusiness, RoomBusiness>();
@@ -67,7 +63,6 @@ builder.Services.AddScoped<IPlayerCardBusiness, PlayerCardBusiness>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
